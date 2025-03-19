@@ -220,4 +220,52 @@ body {
 
 fieldset {
   border: 1px solid #ddd;
-  border-radius
+  border-radius: 4px;
+  padding: 8px 12px 12px;
+  margin: 8px 0;
+}
+
+legend {
+  padding: 0 5px;
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.system-grid {
+  display: grid;
+  gap: 8px;
+  margin-top: 5px;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 481px) {
+  .system-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .system-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .system-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.system-grid label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  margin: 2px 0;
+}
+
+.system-grid input[type="checkbox"] {
+  margin: 0;
+}

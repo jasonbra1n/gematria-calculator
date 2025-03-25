@@ -298,3 +298,32 @@ legend {
     padding: 15px;
   }
 }
+footer {
+  background-color: #f9f9f9; /* Matches .gematria-calculator */
+  padding: 10px 20px; /* Compact but comfortable */
+  text-align: center; /* Centers the text */
+  font-size: 0.9em; /* Slightly smaller for subtlety */
+  color: #555; /* Matches .system-name for a softer tone */
+  border-top: 1px solid #ddd; /* Subtle separation from content */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
+  margin-top: 20px; /* Space above footer */
+}
+
+footer a {
+  color: var(--primary-color); /* #4CAF50, ties into your theme */
+  text-decoration: none; /* Removes underline for a cleaner look */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer a:hover {
+  color: var(--hover-primary); /* #45a049, matches button hover */
+  text-decoration: underline; /* Adds underline on hover for feedback */
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  footer {
+    padding: 8px 15px; /* Slightly tighter on small screens */
+    font-size: 0.85em;
+  }
+}

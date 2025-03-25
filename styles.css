@@ -269,3 +269,32 @@ legend {
 .system-grid input[type="checkbox"] {
   margin: 0;
 }
+.content-card {
+  background-color: #f9f9f9; /* Matches .gematria-calculator */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+  max-width: 600px; /* Matches .gematria-calculator */
+  margin: 20px auto; /* Centers it and adds spacing from results */
+}
+
+.content-card h3 {
+  color: #333; /* Matches h2 in .gematria-calculator */
+  font-size: 1.25em; /* Slightly smaller than h2 but prominent */
+  margin: 0 0 10px; /* Spacing below heading */
+}
+
+.content-card p {
+  color: #555; /* Softer color for readability, matches .system-name */
+  font-size: 1em;
+  line-height: 1.5; /* Improves readability */
+  margin: 0 0 15px; /* Spacing between paragraphs */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 600px) {
+  .content-card {
+    margin: 15px 10px; /* Slightly tighter on small screens */
+    padding: 15px;
+  }
+}

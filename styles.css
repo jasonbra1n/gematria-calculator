@@ -17,6 +17,9 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   background: transparent !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .gematria-calculator {
@@ -26,6 +29,7 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 0 auto;
+  flex: 1; /* Pushes footer down */
 }
 
 .gematria-calculator h2 {
@@ -313,6 +317,9 @@ footer a {
   color: var(--primary-color); /* #4CAF50, ties into your theme */
   text-decoration: none; /* Removes underline for a cleaner look */
   transition: color 0.3s ease; /* Smooth hover effect */
+  position: sticky;
+  bottom: 0;
+  width: 100%;
 }
 
 footer a:hover {

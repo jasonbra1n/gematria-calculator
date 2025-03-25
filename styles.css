@@ -315,6 +315,7 @@ footer {
   position: sticky;
   bottom: 0;
   width: 100%;
+  display: inline-flex; /* Aligns icon and text */
   /* align-items: center; /* Vertically centers icon with text */
 }
 

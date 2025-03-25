@@ -315,14 +315,14 @@ footer {
   position: sticky;
   bottom: 0;
   width: 100%;
-  align-items: center; /* Vertically centers icon with text */
+  /* align-items: center; /* Vertically centers icon with text */
 }
 
 footer a {
   color: var(--systems-color); /* #2196F3 */
   text-decoration: none;
   display: inline-flex; /* Aligns icon and text */
-  align-items: center; /* Vertically centers icon with text */
+  /* align-items: center;  /* Vertically centers icon with text */
   gap: 5px; /* Space between icon and "GitHub" */
   transition: color 0.3s ease;
 }

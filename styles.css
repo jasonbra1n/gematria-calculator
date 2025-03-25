@@ -311,26 +311,33 @@ footer {
   border-top: 1px solid #ddd; /* Subtle separation from content */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
   margin-top: 20px; /* Space above footer */
-}
-
-footer a {
-  color: var(--primary-color); /* #4CAF50, ties into your theme */
-  text-decoration: none; /* Removes underline for a cleaner look */
-  transition: color 0.3s ease; /* Smooth hover effect */
   position: sticky;
   bottom: 0;
   width: 100%;
 }
 
+footer a {
+  color: var(--primary-color); /* #4CAF50 */
+  text-decoration: none;
+  display: inline-flex; /* Aligns icon and text */
+  align-items: center; /* Vertically centers icon with text */
+  gap: 5px; /* Space between icon and "GitHub" */
+  transition: color 0.3s ease;
+}
+
 footer a:hover {
-  color: var(--hover-primary); /* #45a049, matches button hover */
-  text-decoration: underline; /* Adds underline on hover for feedback */
+  color: var(--hover-primary); /* #45a049 */
+  text-decoration: underline;
+}
+
+.github-icon {
+  vertical-align: middle; /* Fine-tunes alignment */
 }
 
 /* Responsive tweak */
 @media (max-width: 600px) {
   footer {
-    padding: 8px 15px; /* Slightly tighter on small screens */
+    padding: 8px 15px;
     font-size: 0.85em;
   }
 }

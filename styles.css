@@ -317,7 +317,7 @@ footer {
 }
 
 footer a {
-  color: var(--primary-color); /* #4CAF50 */
+  color: var(--systems-color); /* #2196F3 */
   text-decoration: none;
   display: inline-flex; /* Aligns icon and text */
   align-items: center; /* Vertically centers icon with text */
@@ -326,8 +326,8 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--hover-primary); /* #45a049 */
-  text-decoration: underline;
+  color: var(--hover-systems); /* #1976D2 */
+  text-decoration: underline; 
 }
 
 .github-icon {

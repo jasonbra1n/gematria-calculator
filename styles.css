@@ -297,6 +297,17 @@ legend {
   margin: 0 0 15px;
 }
 
+.content-card a {
+  color: var(--primary-color); /* #4CAF50 */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.content-card a:hover {
+  color: var(--hover-primary); /* #45a049 */
+  text-decoration: underline;
+}
+
 @media (max-width: 600px) {
   .content-card {
     margin: 15px 10px;

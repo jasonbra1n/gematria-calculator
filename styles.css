@@ -274,73 +274,117 @@ legend {
 .system-grid input[type="checkbox"] {
   margin: 0;
 }
+
 .content-card {
-  background-color: #f9f9f9; /* Matches .gematria-calculator */
+  background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Consistent shadow */
-  max-width: 600px; /* Matches .gematria-calculator */
-  margin: 20px auto; /* Centers it and adds spacing from results */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
 }
 
 .content-card h3 {
-  color: #333; /* Matches h2 in .gematria-calculator */
-  font-size: 1.25em; /* Slightly smaller than h2 but prominent */
-  margin: 0 0 10px; /* Spacing below heading */
+  color: #333;
+  font-size: 1.25em;
+  margin: 0 0 10px;
 }
 
 .content-card p {
-  color: #555; /* Softer color for readability, matches .system-name */
+  color: #555;
   font-size: 1em;
-  line-height: 1.5; /* Improves readability */
-  margin: 0 0 15px; /* Spacing between paragraphs */
+  line-height: 1.5;
+  margin: 0 0 15px;
 }
 
-/* Optional: Responsive adjustments */
 @media (max-width: 600px) {
   .content-card {
-    margin: 15px 10px; /* Slightly tighter on small screens */
+    margin: 15px 10px;
     padding: 15px;
   }
 }
+
 footer {
-  background-color: #f9f9f9; /* Matches .gematria-calculator */
-  padding: 10px 20px; /* Compact but comfortable */
-  text-align: center; /* Centers the text */
-  font-size: 0.9em; /* Slightly smaller for subtlety */
-  color: #555; /* Matches .system-name for a softer tone */
-  border-top: 1px solid #ddd; /* Subtle separation from content */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Light shadow for depth */
-  margin-top: 20px; /* Space above footer */
+  background-color: #f9f9f9;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
   position: sticky;
   bottom: 0;
   width: 100%;
-  display: inline-flex; /* Aligns icon and text */
-  /* align-items: center; /* Vertically centers icon with text */
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 footer a {
-  color: var(--systems-color); /* #2196F3 */
+  color: var(--systems-color);
   text-decoration: none;
-  display: inline-flex; /* Aligns icon and text */
-  /* align-items: center;  /* Vertically centers icon with text */
-  gap: 5px; /* Space between icon and "GitHub" */
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: var(--hover-systems); /* #1976D2 */
-  text-decoration: underline; 
+  color: var(--hover-systems);
+  text-decoration: underline;
 }
 
 .github-icon {
-  vertical-align: middle; /* Fine-tunes alignment */
+  vertical-align: middle;
 }
 
-/* Responsive tweak */
 @media (max-width: 600px) {
   footer {
     padding: 8px 15px;
     font-size: 0.85em;
   }
+}
+
+.cipher-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cipher-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  text-align: center;
+}
+
+.cipher-card h3 {
+  color: #333;
+  font-size: 1.1em;
+  margin: 0 0 10px;
+}
+
+.cipher-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.cipher-card th, .cipher-card td {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.cipher-card th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.cipher-card td {
+  background-color: #f9f9f9;
 }

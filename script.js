@@ -242,8 +242,17 @@ function calculateSystemValue(word, system) {
   let total = 0;
   
   for (const char of upperWord) {
-    const code = char.charCodeAt(0) - 64;
-    if (code < 1 || code > 26) continue;
+    // Check if the system is 'alphanumeric'
+    if (system === 'alphanumeric') {
+      // Check if the character is a digit
+      if (char >= '0' && char <= '9') {
+        total += parseInt(char, 10); // Convert the character to an integer and add to total
+        continue; // Skip to the next character
+      }
+    }
+
+    const code = char.charCodeAt(0) - 64; // Calculate the code for letters A-Z
+    if (code < 1 || code > 26) continue; // Skip if not a valid letter
     
     switch(system) {
       case 'ordinal':

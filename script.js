@@ -153,6 +153,13 @@ const keypadMap = {
   S: 7, T: 8, U: 8, V: 8, W: 9, X: 9, Y: 9, Z: 9
 };
 
+// Alphanumeric
+const alphanumericMap = {
+  A: 10, B: 11, C: 12, D: 13, E: 14, F: 15, G: 16, H: 17, I: 18,
+  J: 19, K: 20, L: 21, M: 22, N: 23, O: 24, P: 25, Q: 26, R: 27,
+  S: 28, T: 29, U: 30, V: 31, W: 32, X: 33, Y: 34, Z: 35
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   // Detect which page we're on
   const isIndexPage = document.getElementById('gematria-form');
@@ -235,8 +242,17 @@ function calculateSystemValue(word, system) {
   let total = 0;
   
   for (const char of upperWord) {
-    const code = char.charCodeAt(0) - 64;
-    if (code < 1 || code > 26) continue;
+    // Check if the system is 'alphanumeric'
+    if (system === 'alphanumeric') {
+      // Check if the character is a digit
+      if (char >= '0' && char <= '9') {
+        total += parseInt(char, 10); // Convert the character to an integer and add to total
+        continue; // Skip to the next character
+      }
+    }
+
+    const code = char.charCodeAt(0) - 64; // Calculate the code for letters A-Z
+    if (code < 1 || code > 26) continue; // Skip if not a valid letter
     
     switch(system) {
       case 'ordinal':
@@ -320,6 +336,9 @@ function calculateSystemValue(word, system) {
       case 'keypad':
         total += keypadMap[char] || 0;
         break;
+      case 'alphanumeric':
+        total += alphanumericMap[char] || 0;
+        break;
       default:
         break;
     }
@@ -390,7 +409,8 @@ function displayCipherTables() {
     'Reverse Squares': reverseSquaresMap,
     'Chaldean': chaldeanMap,
     'Septenary': septenaryMap,
-    'Keypad': keypadMap
+    'Keypad': keypadMap,
+    'Alphanumeric': alphanumericMap
   };
 
   let tablesHTML = '';

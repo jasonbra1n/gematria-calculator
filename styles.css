@@ -10,32 +10,88 @@
   --error-color: #ff4444;
   --base-systems-color: #9C27B0;
   --hover-base-systems: #7B1FA2;
+
+  --bg-color: #fff;
+  --text-color: #333;
+  --card-bg-color: #f9f9f9;
+  --border-color: #ddd;
+  --input-bg-color: #fff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --card-bg-color: #1e1e1e;
+  --border-color: #444;
+  --input-bg-color: #333;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: transparent !important;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--card-bg-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--border-color);
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header nav a {
+  color: var(--systems-color);
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: var(--hover-systems);
+}
+
+#theme-toggle {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: var(--systems-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+  background-color: var(--hover-systems);
 }
 
 .gematria-calculator {
-  background-color: #f9f9f9;
+  background-color: var(--card-bg-color);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 600px;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 20px auto;
   flex: 1; /* Pushes footer down */
 }
 
 .gematria-calculator h2 {
   text-align: center;
-  color: #333;
+  color: var(--text-color);
   margin-top: 0;
 }
 
@@ -66,9 +122,11 @@ body {
 
 .gematria-calculator input[type="text"] {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 16px;
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
 }
 
 .button-row {
@@ -126,23 +184,24 @@ body {
 }
 
 .result-column {
-  background: white;
+  background: var(--bg-color);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   min-width: 120px;
   text-align: center;
+  border: 1px solid var(--border-color);
 }
 
 .system-name {
   font-size: 0.75em;
-  color: #555;
+  color: var(--text-color);
 }
 
 .primary-result {
   font-size: 1.5em;
   font-weight: bold;
-  color: #222;
+  color: var(--text-color);
 }
 
 .overlay {
@@ -159,7 +218,7 @@ body {
 }
 
 .overlay-content {
-  background: white;
+  background: var(--card-bg-color);
   padding: 25px;
   border-radius: 8px;
   width: 90%;
@@ -167,6 +226,8 @@ body {
   max-height: 80vh;
   overflow-y: auto;
   position: relative;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
 }
 
 .close-btn {
@@ -224,7 +285,7 @@ body {
 }
 
 fieldset {
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   padding: 8px 12px 12px;
   margin: 8px 0;
@@ -233,7 +294,7 @@ fieldset {
 legend {
   padding: 0 5px;
   font-size: 0.85em;
-  color: #666;
+  color: var(--text-color);
   margin-bottom: 4px;
   line-height: 1.2;
 }
@@ -276,22 +337,23 @@ legend {
 }
 
 .content-card {
-  background-color: #f9f9f9;
+  background-color: var(--card-bg-color);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 20px auto;
+  border: 1px solid var(--border-color);
 }
 
 .content-card h3 {
-  color: #333;
+  color: var(--text-color);
   font-size: 1.25em;
   margin: 0 0 10px;
 }
 
 .content-card p {
-  color: #555;
+  color: var(--text-color);
   font-size: 1em;
   line-height: 1.5;
   margin: 0 0 15px;
@@ -316,12 +378,12 @@ legend {
 }
 
 footer {
-  background-color: #f9f9f9;
+  background-color: var(--card-bg-color);
   padding: 10px 20px;
   text-align: center;
   font-size: 0.9em;
-  color: #555;
-  border-top: 1px solid #ddd;
+  color: var(--text-color);
+  border-top: 1px solid var(--border-color);
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
   margin-top: 20px;
   position: sticky;
@@ -366,16 +428,17 @@ footer a:hover {
 }
 
 .cipher-card {
-  background-color: #fff;
+  background-color: var(--card-bg-color);
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   min-width: 200px;
   text-align: center;
+  border: 1px solid var(--border-color);
 }
 
 .cipher-card h3 {
-  color: #333;
+  color: var(--text-color);
   font-size: 1.1em;
   margin: 0 0 10px;
 }
@@ -387,7 +450,7 @@ footer a:hover {
 }
 
 .cipher-card th, .cipher-card td {
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   padding: 5px;
 }
 
@@ -397,5 +460,5 @@ footer a:hover {
 }
 
 .cipher-card td {
-  background-color: #f9f9f9;
+  background-color: var(--bg-color);
 }

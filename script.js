@@ -162,6 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme(savedTheme);
   } else if (prefersDark) {
     applyTheme('dark');
+  } else {
+    applyTheme('light');
   }
 
   themeToggle.addEventListener('click', () => {

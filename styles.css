@@ -69,9 +69,21 @@ header nav a:hover {
   border-radius: 4px;
   border: 1px solid var(--border-color);
   background-color: var(--systems-color);
-  color: white;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+.theme-icon {
+  display: none;
+  fill: white;
+}
+
+[data-theme="light"] .sun {
+  display: block;
+}
+
+[data-theme="dark"] .moon {
+  display: block;
 }
 
 #theme-toggle:hover {

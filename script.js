@@ -152,10 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => response.text())
       .then(data => {
         header.innerHTML = data;
-        initializeThemeToggle();
-        initializeScrollHeader();
+        initializeThemeToggle(); // Theme toggle is inside the header
       });
   }
+  initializeScrollBehavior();
 
   const footer = document.querySelector('footer');
   if (footer) {
@@ -196,23 +196,29 @@ function initializeThemeToggle() {
   });
 }
 
-function initializeScrollHeader() {
+function initializeScrollBehavior() {
   const header = document.querySelector('header');
-  if (!header) return;
+  const footer = document.querySelector('footer');
+  if (!header || !footer) return;
 
   let lastScrollTop = 0;
   const scrollThreshold = 5; // Pixels to scroll before triggering hide/show
 
   window.addEventListener('scroll', () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
 
     if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight && Math.abs(scrollTop - lastScrollTop) > scrollThreshold) {
       // Scrolling down
       header.classList.add('header-hidden');
+      footer.classList.add('footer-hidden');
     } else if (scrollTop < lastScrollTop && Math.abs(scrollTop - lastScrollTop) > scrollThreshold) {
       // Scrolling up
       header.classList.remove('header-hidden');
+      footer.classList.remove('footer-hidden');
     }
+
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   }, false);
 }

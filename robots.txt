@@ -1,0 +1,5 @@
+# Allow all crawlers to access all content
+User-agent: *
+Disallow:
+
+Sitemap: https://your-domain.com/sitemap.xml

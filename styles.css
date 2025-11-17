@@ -441,7 +441,13 @@ footer {
   display: flex;
   justify-content: center;
   gap: 10px;
+  transition: transform 0.3s ease-in-out;
 }
+
+footer.footer-hidden {
+  transform: translateY(100%);
+}
+
 
 footer a {
   color: var(--systems-color);

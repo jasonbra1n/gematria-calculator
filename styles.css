@@ -46,6 +46,43 @@ header {
   background-color: var(--card-bg-color);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+header.header-hidden {
+  transform: translateY(-100%);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.logo-icon {
+  stroke: var(--primary-color);
+}
+
+.logo-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .logo-title {
+    display: none;
+  }
 }
 
 header nav {

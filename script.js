@@ -146,7 +146,29 @@ const alphanumericQabbalaMap = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('theme-toggle');
+  const header = document.querySelector('header');
+  if (header) {
+    fetch('/header.html')
+      .then(response => response.text())
+      .then(data => {
+        header.innerHTML = data;
+        initializeThemeToggle();
+        initializeScrollHeader();
+      });
+  }
+
+  const footer = document.querySelector('footer');
+  if (footer) {
+    fetch('/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        footer.innerHTML = data;
+      });
+  }
+  initializePage();
+});
+
+function initializeThemeToggle() {
   const isIndexPage = document.getElementById('gematria-form');
   const isCiphersPage = document.getElementById('cipher-tables');
 
@@ -166,12 +188,39 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme('light');
   }
 
+  const themeToggle = document.getElementById('theme-toggle');
   themeToggle.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     applyTheme(newTheme);
   });
+}
 
+function initializeScrollHeader() {
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  let lastScrollTop = 0;
+  const scrollThreshold = 5; // Pixels to scroll before triggering hide/show
+
+  window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight && Math.abs(scrollTop - lastScrollTop) > scrollThreshold) {
+      // Scrolling down
+      header.classList.add('header-hidden');
+    } else if (scrollTop < lastScrollTop && Math.abs(scrollTop - lastScrollTop) > scrollThreshold) {
+      // Scrolling up
+      header.classList.remove('header-hidden');
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  }, false);
+}
+
+function initializePage() {
+  const isIndexPage = document.getElementById('gematria-form');
+  const isCiphersPage = document.getElementById('cipher-tables');
+  
   if (isIndexPage) {
     const overlay = document.getElementById('systems-overlay');
     const openBtn = document.getElementById('open-systems-overlay');
@@ -213,7 +262,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (isCiphersPage) {
     displayCipherTables();
   }
-});
+}
 
 function calculateGematria() {
   const word = document.getElementById('gematria-word').value.trim();

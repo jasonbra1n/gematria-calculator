@@ -152,9 +152,10 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => response.text())
       .then(data => {
         header.innerHTML = data;
-        initializeThemeToggle(); // Theme toggle is inside the header
+        initializeHeader();
       });
   }
+  initializeScrollToTop();
   initializeScrollBehavior();
 
   const footer = document.querySelector('footer');
@@ -168,7 +169,15 @@ document.addEventListener('DOMContentLoaded', () => {
   initializePage();
 });
 
-function initializeThemeToggle() {
+function initializeHeader() {
+  // This function now handles all header-related initializations
+  initializeThemeToggle();
+  initializeHamburgerMenu();
+  populateMobileNav();
+}
+
+
+function initializeThemeToggle() { // This function remains mostly the same
   const isIndexPage = document.getElementById('gematria-form');
   const isCiphersPage = document.getElementById('cipher-tables');
 
@@ -194,6 +203,35 @@ function initializeThemeToggle() {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     applyTheme(newTheme);
   });
+}
+
+function initializeHamburgerMenu() {
+  const hamburger = document.getElementById('hamburger-menu');
+  const mobileNav = document.getElementById('mobile-nav');
+  const mainContent = document.querySelector('.gematria-calculator, .content-card, #cipher-tables');
+
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+
+    // Close menu when clicking outside of it
+    document.body.addEventListener('click', (event) => {
+      if (mobileNav.classList.contains('open') && !mobileNav.contains(event.target) && !hamburger.contains(event.target)) {
+        hamburger.classList.remove('open');
+        mobileNav.classList.remove('open');
+      }
+    });
+  }
+}
+
+function populateMobileNav() {
+  const mobileNav = document.getElementById('mobile-nav');
+  const desktopNav = document.querySelector('header nav');
+  if (mobileNav && desktopNav) {
+    mobileNav.innerHTML = desktopNav.innerHTML;
+  }
 }
 
 function initializeScrollBehavior() {
@@ -222,6 +260,27 @@ function initializeScrollBehavior() {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   }, false);
 }
+
+function initializeScrollToTop() {
+  const scrollToTopBtn = document.getElementById('scroll-to-top');
+  if (!scrollToTopBtn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add('visible');
+    } else {
+      scrollToTopBtn.classList.remove('visible');
+    }
+  });
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
 
 function initializePage() {
   const isIndexPage = document.getElementById('gematria-form');

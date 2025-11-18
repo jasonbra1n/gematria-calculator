@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2025-11-18
+
+### ✨ Added
+- **Scroll to Top Button:** A floating button now appears on all pages, allowing users to quickly return to the top with a smooth scroll.
+
+### 🎨 Improved
+- **Responsive Form Design:** The main calculator form has been optimized for desktop screens, preventing input fields and buttons from becoming excessively wide.
+- **Mobile Navigation:** A responsive hamburger menu has been implemented for a better user experience on smaller devices.
+- **UI Animations:** The hamburger menu icon now animates into an "X" when the menu is open, providing clear visual feedback.
+- **Input Field Responsiveness:** The main text input now resizes correctly on mobile screens, preventing layout issues.
+
+
 ## [1.0.0] - 2025-11-17
 
 ### ✨ Added

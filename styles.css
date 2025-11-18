@@ -77,12 +77,83 @@ header.header-hidden {
   display: flex;
   align-items: center;
   gap: 20px;
+  position: relative; /* For mobile nav positioning */
 }
 
 @media (max-width: 480px) {
   .logo-title {
     display: none;
   }
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001; /* Ensure it's above mobile nav */
+  position: relative;
+}
+
+.hamburger span {
+  width: 2rem;
+  height: 0.25rem;
+  background: var(--text-color);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+}
+
+.hamburger span:nth-child(1) { top: 0.3125rem; }
+.hamburger span:nth-child(2) { top: 0.875rem; }
+.hamburger span:nth-child(3) { top: 1.4375rem; }
+
+.hamburger.open span:nth-child(1) {
+  top: 0.875rem;
+  transform: rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  top: 0.875rem;
+  transform: rotate(-135deg);
+}
+
+/* Mobile Navigation Panel */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  background-color: var(--card-bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  padding-top: 5rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 5;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+.mobile-nav a {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  text-decoration: none;
 }
 
 header nav {
@@ -127,6 +198,21 @@ header nav a:hover {
   background-color: var(--hover-systems);
 }
 
+@media (max-width: 768px) {
+  header nav {
+    display: none; /* Hide desktop nav on mobile */
+  }
+  .hamburger {
+    display: flex; /* Show hamburger on mobile */
+  }
+  .mobile-nav {
+    display: flex; /* Prepare mobile nav for display */
+  }
+  .header-right {
+    order: 1; /* Ensure hamburger is on the left */
+  }
+}
+
 .gematria-calculator {
   background-color: var(--card-bg-color);
   padding: 20px;
@@ -146,16 +232,20 @@ header nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-width: 500px; /* Limit width on larger screens */
+  margin: 0 auto; /* Center the form */
 }
 
 .input-container {
   position: relative;
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
   gap: 10px;
 }
 
 .input-container input {
   flex: 1;
+  min-width: 100px; /* Prevent input from becoming too small */
   padding-right: 40px;
 }
 
@@ -228,6 +318,13 @@ header nav a:hover {
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
+}
+
+.result-error {
+  text-align: center;
+  color: var(--error-color);
+  margin-top: 15px;
+  font-weight: 500;
 }
 
 .result-column {
@@ -520,4 +617,36 @@ footer a:hover {
     width: 100%;
     box-sizing: border-box;
   }
+}
+
+/* Scroll to Top Button */
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: var(--systems-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s ease-in-out;
+  z-index: 999;
+}
+
+#scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scroll-to-top:hover {
+  background-color: var(--hover-systems);
 }

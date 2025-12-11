@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2025-12-10
+
+### 📝 Documentation
+- **Added Project Governance Files:**
+  - **`CONTRIBUTING.md`**: Guidelines for new contributors, including development setup and style guides.
+  - **`ROADMAP.md`**: A detailed plan for future development, structured into short-term, mid-term, and long-term goals.
+  - **`CODE_OF_CONDUCT.md`**: Community standards based on the Contributor Covenant to foster a welcoming environment.
+  - **`PRIVACY.md`**: A policy explaining data usage, including `localStorage` and third-party services like Google Analytics and AdSense.
+  - **`TOS.md`**: A Terms of Service page outlining the use of the tool.
+- **Updated README:**
+  - Added badges for license, contributions, and website status.
+  - Added a "Project Information" section with links to the new documentation files (`CONTRIBUTING.md`, `ROADMAP.md`, `PRIVACY.md`, `TOS.md`).
+  - Added a dedicated "License" section.
+- **Updated CONTRIBUTING.md:**
+  - Linked to the `CODE_OF_CONDUCT.md` and added a new section on Project Management.
+
 ## [1.0.1] - 2025-11-18
 
 ### ✨ Added
@@ -15,7 +31,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Mobile Navigation:** A responsive hamburger menu has been implemented for a better user experience on smaller devices.
 - **UI Animations:** The hamburger menu icon now animates into an "X" when the menu is open, providing clear visual feedback.
 - **Input Field Responsiveness:** The main text input now resizes correctly on mobile screens, preventing layout issues.
-
 
 ## [1.0.0] - 2025-11-17
 

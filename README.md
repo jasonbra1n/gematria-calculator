@@ -1,5 +1,17 @@
 # Gematria Calculator
 
+<p align="center">
+  <a href="https://gematria-calculator.jasonbrain.com/">
+    <img alt="Website" src="https://img.shields.io/website?up_message=online&down_message=offline&label=gematria-calculator.jasonbrain.com&url=https%3A%2F%2Fgematria-calculator.jasonbrain.com%2F">
+  </a>
+  <a href="LICENSE">
+    <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+  </a>
+  <a href="CONTRIBUTING.md">
+    <img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg">
+  </a>
+</p>
+
 A modern, feature-rich online calculator for finding the numerical value of words or phrases using various gematria systems.
 
 ## Demo
@@ -10,6 +22,14 @@ You can try the calculator live at: **[gematria-calculator.jasonbrain.com](https
 <!-- e.g., ![Gematria Calculator Demo](assets/demo.gif) -->
 
 ## ✨ Features
+
+## ℹ️ Project Information
+
+-   **Contributing:** Interested in helping out? Check out our [CONTRIBUTING.md](CONTRIBUTING.md) guide.
+-   **Roadmap:** See what's planned for the future in our [ROADMAP.md](ROADMAP.md).
+-   **Privacy Policy:** Read our [PRIVACY.md](PRIVACY.md) to understand how your data is handled.
+-   **Terms of Service:** Review our [TOS.md](TOS.md) before using the service.
+
 
 The Gematria Calculator is designed to be a comprehensive and user-friendly tool for both enthusiasts and researchers.
 
@@ -29,7 +49,11 @@ The Gematria Calculator is designed to be a comprehensive and user-friendly tool
     -   **About Page:** A detailed article explaining the history, meaning, and cultural significance of gematria.
     -   **Ciphers Page:** A complete reference guide with value tables for every supported gematria system.
 
-## 🚀 Usage
+## 📜 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## � Usage
 
 1.  **Enter a word or phrase** in the input field.
 2.  Click **"Select Gematria Systems"** to open the customization overlay.

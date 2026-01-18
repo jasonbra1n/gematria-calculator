@@ -637,6 +637,59 @@ footer a:hover {
   background-color: var(--bg-color);
 }
 
+/* Sort Controls */
+.sort-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: var(--card-bg-color);
+  border-radius: 4px;
+  flex-wrap: wrap;
+}
+
+.sort-label {
+  font-weight: bold;
+  color: var(--text-color);
+  font-size: 0.9em;
+}
+
+.btn-sort {
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85em;
+}
+
+.btn-sort:hover {
+  background-color: var(--systems-color);
+  color: white;
+  border-color: var(--systems-color);
+}
+
+.btn-sort.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .sort-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-sort {
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .cipher-card {
     width: 100%;

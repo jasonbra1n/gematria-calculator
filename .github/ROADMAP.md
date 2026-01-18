@@ -9,10 +9,11 @@ The roadmap is a living document and may change based on user feedback and devel
 These are features that can be implemented within the current static site architecture. We aim to track these using GitHub Issues and group them into a milestone for the next minor version release.
 
 -   **Custom Gematria Systems:**
-    -   Allow users to define their own custom ciphers.
-    -   Provide an interface to map letters to specific numerical values.
-    -   Save custom ciphers to the browser's local storage.
-    -   Allow users to import/export one or more custom ciphers (e.g., as a JSON file).
+    -   ~~Allow users to define their own custom ciphers.~~
+    -   ~~Provide an interface to map letters to specific numerical values.~~
+    -   ~~Save custom ciphers to the browser's local storage.~~
+    -   ~~Allow users to import/export one or more custom ciphers (e.g., as a JSON file).~~
+    -   **(Completed in Phase 1.1 - January 2026)**
 
 -   **Advanced Analysis Tools:**
     -   **Phrase Comparison:** A dedicated view to compare the gematria values of two or more phrases side-by-side.

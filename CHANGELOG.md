@@ -48,6 +48,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Navigation Enhancement:**
   - Added "Custom Ciphers" link to header menu
 
+- **Results Sorting:**
+  - Added sort controls above results (Default Order, Sort by Name, Sort by Value)
+  - Sort by Name: Alphabetical ordering of cipher names
+  - Sort by Value: Descending numerical order (highest first)
+  - Sort preference persists in localStorage
+  - Active sort button highlighted with visual feedback
+
 ### 🎨 Improved
 - **CSS Styling (`styles.css`):**
   - Added 450+ lines of custom cipher styles

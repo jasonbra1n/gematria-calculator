@@ -3,23 +3,27 @@
 This document serves as the tactical execution plan for the Gematria Calculator. It breaks down the larger goals from the Roadmap into actionable phases.
 
 ## 📍 Current Status
-- **Version**: 1.0.2
-- **State**: Functional static site with 28+ systems.
-- **Recent Changes**: Restructured repository folders, updated documentation, and clarified Legal/Privacy pages.
+- **Version**: 1.0.4 (Unreleased)
+- **State**: Functional static site with 28+ standard systems + unlimited custom ciphers.
+- **Recent Changes**: Implemented Phase 1.1 Custom Cipher System with full CRUD, import/export, and calculator integration.
 
 ---
 
-## 🚀 Phase 1: Custom Systems & Analysis (Active)
+## 🚀 Phase 1: Custom Systems & Analysis (In Progress)
 **Goal**: Allow users to interact more deeply with the data.
 
-### 1.1 Custom Gematria Ciphers
-- [ ] Create UI for mapping letters (A-Z) to custom numbers.
-- [ ] Implement `localStorage` saving for custom cipher sets.
-- [ ] Add Import/Export functionality (JSON).
+### 1.1 Custom Gematria Ciphers ✅ COMPLETE
+- [x] Create UI for mapping letters (A-Z) to custom numbers.
+- [x] Implement `localStorage` saving for custom cipher sets.
+- [x] Add Import/Export functionality (JSON).
+- [x] Integrate custom ciphers into main calculator.
+- [x] Add live preview and preset generators.
+- [x] Implement storage monitoring (50-cipher limit).
 
-### 1.2 Phrase Comparison View
+### 1.2 Phrase Comparison View (Next)
 - [ ] Design a layout for side-by-side comparison.
 - [ ] Allow adding multiple phrases to a single "comparison list".
+- [ ] Add CSV export functionality.
 
 ---
 

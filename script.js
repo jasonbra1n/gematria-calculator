@@ -411,7 +411,48 @@ function calculateGematria() {
     };
   });
 
+  // Apply sorting based on current sort preference
+  const sortBy = localStorage.getItem('resultsSortBy') || 'default';
+  sortResults(results, sortBy);
+
   displayResults(results);
+}
+
+/**
+ * Sort results array based on sort type
+ * @param {Array} results - Array of result objects
+ * @param {string} sortBy - 'default', 'name', or 'value'
+ */
+function sortResults(results, sortBy) {
+  if (sortBy === 'name') {
+    results.sort((a, b) => {
+      const nameA = getSystemDisplayName(a.system).toLowerCase();
+      const nameB = getSystemDisplayName(b.system).toLowerCase();
+      return nameA.localeCompare(nameB);
+    });
+  } else if (sortBy === 'value') {
+    results.sort((a, b) => b.value - a.value); // Descending order (highest first)
+  }
+  // 'default' keeps original order (order of selection)
+}
+
+/**
+ * Get display name for a system
+ * @param {string} system - System identifier
+ * @returns {string} Display name
+ */
+function getSystemDisplayName(system) {
+  if (system === 'alphanumeric') return 'Alphanumeric Qabbala (AQ)';
+  if (system.startsWith('custom-')) {
+    const cipher = typeof CipherManager !== 'undefined' 
+      ? CipherManager.getCipherById(system.replace('custom-', ''))
+      : null;
+    return cipher ? cipher.name : system;
+  }
+  // Convert kebab-case to Title Case
+  return system.split('-').map(word => 
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(' ');
 }
 
 function calculateSystemValue(word, system) {
@@ -548,15 +589,40 @@ function displayResults(results) {
   const container = document.getElementById('gematria-results');
   container.innerHTML = '';
   
+  // Get current sort preference
+  const sortBy = localStorage.getItem('resultsSortBy') || 'default';
+  
+  // Create sort controls
+  const sortControlsHTML = `
+    <div class="sort-controls">
+      <span class="sort-label">Sort by:</span>
+      <button class="btn-sort ${sortBy === 'default' ? 'active' : ''}" data-sort="default">Default Order</button>
+      <button class="btn-sort ${sortBy === 'name' ? 'active' : ''}" data-sort="name">Name</button>
+      <button class="btn-sort ${sortBy === 'value' ? 'active' : ''}" data-sort="value">Value</button>
+    </div>
+  `;
+  
   const resultsHTML = results.map(result => `
     <div class="result-column">
-      <div class="system-name">${result.system === 'alphanumeric' ? 'Alphanumeric Qabbala (AQ)' : result.system}</div>
+      <div class="system-name">${getSystemDisplayName(result.system)}</div>
       <div class="primary-result">${result.value}</div>
       ${result.reduced ? `<div class="reduced-result">${result.reduced}</div>` : ''}
     </div>
   `).join('');
 
-  container.innerHTML = `<div class="results-container">${resultsHTML}</div>`;
+  container.innerHTML = `
+    ${sortControlsHTML}
+    <div class="results-container">${resultsHTML}</div>
+  `;
+  
+  // Attach event listeners to sort buttons
+  document.querySelectorAll('.btn-sort').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const newSortBy = e.target.dataset.sort;
+      localStorage.setItem('resultsSortBy', newSortBy);
+      calculateGematria(); // Re-calculate to apply new sort
+    });
+  });
 }
 
 function showError(message) {

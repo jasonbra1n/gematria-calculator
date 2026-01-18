@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0633259514526906"
-     crossorigin="anonymous"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKFFH2SY55"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKFFH2SY55"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-SKFFH2SY55');
-</script>
-  
+    gtag('config', 'G-SKFFH2SY55');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom Ciphers - Gematria Calculator</title>
-  <meta name="description" content="Create and manage your own custom gematria ciphers. Define letter-to-number mappings and save them for future calculations.">
+  <meta name="description"
+    content="Create and manage your own custom gematria ciphers. Define letter-to-number mappings and save them for future calculations.">
   <meta name="keywords" content="custom gematria, custom cipher, gematria calculator, create cipher">
   <link rel="canonical" href="https://gematria-calculator.jasonbrain.com/custom-ciphers.html">
   <link rel="icon" href="/logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#4CAF50">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -38,6 +42,7 @@
 
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
     <!-- Header content is loaded dynamically -->
@@ -45,8 +50,9 @@
 
   <div class="content-card">
     <h2>Custom Gematria Ciphers</h2>
-    <p>Create your own custom letter-to-number mappings for specialized gematria research. Your custom ciphers will be saved in your browser and available in the main calculator.</p>
-    
+    <p>Create your own custom letter-to-number mappings for specialized gematria research. Your custom ciphers will be
+      saved in your browser and available in the main calculator.</p>
+
     <!-- Storage Info -->
     <div id="storage-info" class="storage-info"></div>
 
@@ -96,17 +102,18 @@
     <div class="overlay-content cipher-builder-content">
       <span class="close-btn" id="close-builder">×</span>
       <h3 id="builder-title">Create Custom Cipher</h3>
-      
+
       <form id="cipher-builder-form">
         <!-- Cipher Info -->
         <div class="form-group">
           <label for="cipher-name">Cipher Name *</label>
           <input type="text" id="cipher-name" required maxlength="50" placeholder="e.g., My Custom Cipher">
         </div>
-        
+
         <div class="form-group">
           <label for="cipher-description">Description (optional)</label>
-          <textarea id="cipher-description" rows="2" maxlength="200" placeholder="Brief description of this cipher system"></textarea>
+          <textarea id="cipher-description" rows="2" maxlength="200"
+            placeholder="Brief description of this cipher system"></textarea>
         </div>
 
         <!-- Quick Fill Presets -->
@@ -147,8 +154,9 @@
 
   <!-- Scroll to Top Button -->
   <button id="scroll-to-top" title="Go to top">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M12 19V5M5 12l7-7 7 7"/>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
     </svg>
   </button>
 
@@ -156,4 +164,5 @@
   <script src="cipher-manager.js"></script>
   <script src="custom-ciphers.js"></script>
 </body>
+
 </html>

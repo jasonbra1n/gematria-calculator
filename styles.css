@@ -679,6 +679,36 @@ footer a:hover {
   font-weight: bold;
 }
 
+.btn-share {
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--overlay-action-color);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.85em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.btn-share:hover {
+  background-color: var(--hover-overlay-action);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-share.copied {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-share svg {
+  flex-shrink: 0;
+}
+
 @media (max-width: 600px) {
   .sort-controls {
     flex-direction: column;
@@ -687,6 +717,12 @@ footer a:hover {
 
   .btn-sort {
     width: 100%;
+  }
+
+  .btn-share {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
   }
 }
 

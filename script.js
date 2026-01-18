@@ -296,6 +296,9 @@ function initializePage() {
     // Load and inject custom ciphers into the overlay
     loadCustomCiphersIntoOverlay();
 
+    // Parse URL parameters for shareable links
+    loadFromURLParameters();
+
     openBtn.addEventListener('click', () => overlay.style.display = 'flex');
     closeBtn.addEventListener('click', () => overlay.style.display = 'none');
     saveBtn.addEventListener('click', () => {
@@ -329,6 +332,36 @@ function initializePage() {
 
   if (isCiphersPage) {
     displayCipherTables();
+  }
+}
+
+/**
+ * Load calculator state from URL parameters
+ * Supports: ?q=text&ciphers=ordinal,reduction&sort=value
+ */
+function loadFromURLParameters() {
+  const urlParams = new URLSearchParams(window.location.search);
+  
+  // Load text input
+  if (urlParams.has('q')) {
+    const text = urlParams.get('q');
+    document.getElementById('gematria-word').value = text;
+  }
+  
+  // Load selected ciphers
+  if (urlParams.has('ciphers')) {
+    const ciphers = urlParams.get('ciphers').split(',');
+    document.querySelectorAll('[name="system"]').forEach(cb => {
+      cb.checked = ciphers.includes(cb.value);
+    });
+  }
+  
+  // Load sort preference
+  if (urlParams.has('sort')) {
+    const sort = urlParams.get('sort');
+    if (['default', 'name', 'value'].includes(sort)) {
+      localStorage.setItem('resultsSortBy', sort);
+    }
   }
 }
 
@@ -599,6 +632,13 @@ function displayResults(results) {
       <button class="btn-sort ${sortBy === 'default' ? 'active' : ''}" data-sort="default">Default Order</button>
       <button class="btn-sort ${sortBy === 'name' ? 'active' : ''}" data-sort="name">Name</button>
       <button class="btn-sort ${sortBy === 'value' ? 'active' : ''}" data-sort="value">Value</button>
+      <button class="btn-share" id="share-link-btn" title="Copy shareable link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+        </svg>
+        Share
+      </button>
     </div>
   `;
   
@@ -622,6 +662,50 @@ function displayResults(results) {
       localStorage.setItem('resultsSortBy', newSortBy);
       calculateGematria(); // Re-calculate to apply new sort
     });
+  });
+  
+  // Attach event listener to share button
+  document.getElementById('share-link-btn')?.addEventListener('click', generateShareLink);
+}
+
+/**
+ * Generate and copy shareable link to clipboard
+ */
+function generateShareLink() {
+  const text = document.getElementById('gematria-word').value.trim();
+  const selectedSystems = Array.from(document.querySelectorAll('[name="system"]:checked')).map(cb => cb.value);
+  const sortBy = localStorage.getItem('resultsSortBy') || 'default';
+  
+  // Build URL parameters
+  const params = new URLSearchParams();
+  if (text) params.set('q', text);
+  if (selectedSystems.length > 0) params.set('ciphers', selectedSystems.join(','));
+  if (sortBy !== 'default') params.set('sort', sortBy);
+  
+  // Generate full URL
+  const baseUrl = window.location.origin + window.location.pathname;
+  const shareUrl = `${baseUrl}?${params.toString()}`;
+  
+  // Copy to clipboard
+  navigator.clipboard.writeText(shareUrl).then(() => {
+    // Show success feedback
+    const btn = document.getElementById('share-link-btn');
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      Copied!
+    `;
+    btn.classList.add('copied');
+    
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+      btn.classList.remove('copied');
+    }, 2000);
+  }).catch(err => {
+    alert('Failed to copy link. Please try again.');
+    console.error('Copy failed:', err);
   });
 }
 

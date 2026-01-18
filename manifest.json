@@ -1,0 +1,61 @@
+{
+  "name": "Gematria Calculator",
+  "short_name": "Gematria",
+  "description": "Calculate gematria values across 28+ systems. Create custom ciphers and compare phrases.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["education", "utilities", "productivity"],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Calculator",
+      "short_name": "Calculate",
+      "description": "Open the gematria calculator",
+      "url": "/",
+      "icons": [{ "src": "/logo.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Custom Ciphers",
+      "short_name": "Ciphers",
+      "description": "Manage custom ciphers",
+      "url": "/custom-ciphers.html",
+      "icons": [{ "src": "/logo.svg", "sizes": "any" }]
+    }
+  ]
+}

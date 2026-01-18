@@ -1,0 +1,57 @@
+# 🗺️ Project Plan: Gematria Calculator
+
+This document serves as the tactical execution plan for the Gematria Calculator. It breaks down the larger goals from the Roadmap into actionable phases.
+
+## 📍 Current Status
+- **Version**: 1.0.2
+- **State**: Functional static site with 28+ systems.
+- **Recent Changes**: Restructured repository folders, updated documentation, and clarified Legal/Privacy pages.
+
+---
+
+## 🚀 Phase 1: Custom Systems & Analysis (Active)
+**Goal**: Allow users to interact more deeply with the data.
+
+### 1.1 Custom Gematria Ciphers
+- [ ] Create UI for mapping letters (A-Z) to custom numbers.
+- [ ] Implement `localStorage` saving for custom cipher sets.
+- [ ] Add Import/Export functionality (JSON).
+
+### 1.2 Phrase Comparison View
+- [ ] Design a layout for side-by-side comparison.
+- [ ] Allow adding multiple phrases to a single "comparison list".
+
+---
+
+## 💅 Phase 2: UI Polish & Shareability
+**Goal**: Improve the "Premium" feel and viral potential.
+
+### 2.1 Visual Identity
+- [ ] Design/Integrate a modern logo (currently `logo.svg` is basic).
+- [ ] Finalize dark/light mode transitions.
+
+### 2.2 Shareable Links
+- [ ] Implement URL parameter parsing (e.g., `?q=Hello&ciphers=ordinal,sumerian`).
+- [ ] Add a "Copy Share Link" button to the UI.
+
+---
+
+## 📱 Phase 3: PWA & Offline Access
+**Goal**: Make the tool feel like a native application.
+
+- [ ] Create `manifest.json`.
+- [ ] Implement a Service Worker for offline caching of core assets.
+- [ ] Add "Install App" prompt logic.
+
+---
+
+## 📚 Phase 4: Content & Internationalization
+**Goal**: Broaden the audience and educational value.
+
+- [ ] **Learn Section**: Expand `about.html` into a multi-page hub.
+- [ ] **i18n**: Refactor code to support language dictionaries, starting with Hebrew/Greek support.
+
+---
+
+## 🛠️ Database Schema (Future / Phase 5)
+*Note: Currently static. This section will be populated if/ when we move to a BaaS like Firebase or Supabase.*

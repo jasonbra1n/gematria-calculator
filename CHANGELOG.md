@@ -5,6 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.3] - 2026-01-18
+
+### 📁 Refactor
+- **Repository Restructuring:**
+  - Organized project management files (`CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `ROADMAP.md`) into the `.github/` folder.
+  - Moved legal and general documentation (`PRIVACY.md`, `TOS.md`) into the `docs/` folder.
+  - Relocated release notes to `docs/releases/`.
+
+### 📝 Documentation
+- **README Updates:** Updated all internal documentation links to point to their new locations in `.github/` and `docs/`.
+- **Project Planning:** Created `docs/PROJECT_PLAN.md` to outline a phased approach for future features.
+
+### 🤖 AI Context & Workflow
+- **Persona Alignment:** Updated `.gemini/PERSONA.md` and `.gemini/CONTEXT.md` to be specifically tailored for Gematria R&D, replacing legacy CMS context.
+- **Workflow Optimization:** Refreshed `.gemini/GEMINI.md` with custom "Magic Spell" prompts for different development phases (Custom Systems, UI Polish, PWA).
+
 ## [1.0.2] - 2025-12-10
 
 ### 📝 Documentation

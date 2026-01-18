@@ -7,7 +7,7 @@
   <a href="LICENSE">
     <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
   </a>
-  <a href="CONTRIBUTING.md">
+  <a href=".github/CONTRIBUTING.md">
     <img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg">
   </a>
 </p>
@@ -25,10 +25,10 @@ You can try the calculator live at: **[gematria-calculator.jasonbrain.com](https
 
 ## ℹ️ Project Information
 
--   **Contributing:** Interested in helping out? Check out our [CONTRIBUTING.md](CONTRIBUTING.md) guide.
--   **Roadmap:** See what's planned for the future in our [ROADMAP.md](ROADMAP.md).
--   **Privacy Policy:** Read our [PRIVACY.md](PRIVACY.md) to understand how your data is handled.
--   **Terms of Service:** Review our [TOS.md](TOS.md) before using the service.
+-   **Contributing:** Interested in helping out? Check out our [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) guide.
+-   **Roadmap:** See what's planned for the future in our [.github/ROADMAP.md](.github/ROADMAP.md).
+-   **Privacy Policy:** Read our [docs/PRIVACY.md](docs/PRIVACY.md) to understand how your data is handled.
+-   **Terms of Service:** Review our [docs/TOS.md](docs/TOS.md) before using the service.
 
 
 The Gematria Calculator is designed to be a comprehensive and user-friendly tool for both enthusiasts and researchers.

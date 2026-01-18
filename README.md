@@ -34,14 +34,15 @@ You can try the calculator live at: **[gematria-calculator.jasonbrain.com](https
 The Gematria Calculator is designed to be a comprehensive and user-friendly tool for both enthusiasts and researchers.
 
 -   **Comprehensive Gematria Engine:** Instantly calculate values across **28 different gematria systems**.
+-   **Custom Cipher System:** Build, save, and import/export your own custom gematria mappings.
+-   **Phrase Comparison View:** Side-by-side analysis of multiple phrases with automatic match highlighting.
 -   **Extensive System Support:** Includes common systems like Ordinal, Reduction, and Standard, as well as more esoteric ones like Sumerian, Primes, and Alphanumeric Qabbala (AQ).
 -   **Real-Time Calculation:** Results update automatically as you type for a seamless experience.
--   **Customizable Experience:**
-    -   A user-friendly overlay to select exactly which systems you want to use.
-    -   Convenience buttons to quickly "Select Base" systems, "Select All," or "Clear" choices.
-    -   An option to display single-digit "Reduced Values" alongside the primary calculation.
+-   **Shareable Links:** Generate and copy unique URLs that pre-populate the calculator state.
+-   **Results Sorting:** Sort calculations by name or value for better data analysis.
 -   **Modern & Responsive UI:**
     -   A clean, intuitive design that works seamlessly on desktop and mobile devices.
+    -   **PWA Ready:** Install the calculator as an app on your mobile device.
     -   **Light & Dark Mode:** Automatically detects your system preference and includes a manual toggle.
     -   An immersive, distraction-free experience with a header and footer that intelligently hide as you scroll.
     -   A "Scroll to Top" button for easy navigation on long pages.

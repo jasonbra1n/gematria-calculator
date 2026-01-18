@@ -4,33 +4,34 @@ This document outlines the future direction and planned features for the Gematri
 
 The roadmap is a living document and may change based on user feedback and development priorities. As this project is hosted on GitHub Pages, features are categorized based on their feasibility within a static hosting environment. Timelines are estimates and subject to change.
 
-## Short-Term Goals (Q1 2026)
-
-These are features that can be implemented within the current static site architecture. We aim to track these using GitHub Issues and group them into a milestone for the next minor version release.
+## Completed Milestones (v1.1.0 - January 2026)
 
 -   **Custom Gematria Systems:**
-    -   ~~Allow users to define their own custom ciphers.~~
-    -   ~~Provide an interface to map letters to specific numerical values.~~
-    -   ~~Save custom ciphers to the browser's local storage.~~
-    -   ~~Allow users to import/export one or more custom ciphers (e.g., as a JSON file).~~
-    -   **(Completed in Phase 1.1 - January 2026)**
-
+    -   Allow users to define their own custom ciphers.
+    -   Interface to map letters to numerical values.
+    -   `localStorage` persistence.
+    -   Import/Export (JSON).
 -   **Advanced Analysis Tools:**
-    -   **Phrase Comparison:** A dedicated view to compare the gematria values of two or more phrases side-by-side.
+    -   **Phrase Comparison:** Side-by-side analysis matrix for multiple phrases.
+    -   **Match Highlighting:** Visual identification of matching values.
+-   **UX Suite:**
+    -   **Results Sorting:** Sort by name or value.
+    -   **Shareable Links:** State-preserving URLs for sharing findings.
+-   **Progressive Web App (PWA):**
+    -   `manifest.json` for "Add to Home Screen" support.
+    -   Standalone display mode and theme integration.
+
+## Short-Term Goals (Q1 2026)
+
+These remaining features are prioritized for the next minor version (v1.2.0):
 
 -   **Enhanced UI/UX:**
     -   **New Logo:** Design a new, modern logo for the project to improve brand identity.
-    -   **Results Filtering & Sorting:** Allow users to sort the results table by cipher name or value.
-    -   **Shareable Links:** Generate a unique URL that saves the current input text and selected ciphers, allowing users to share their findings easily.
-
--   **Community & Documentation:**
-    -   **Contact Form:** Implement a contact page using a static-site-friendly service like Formspree.io to allow for user feedback.
-    -   **Privacy Policy:** ~~Create and add a clear Privacy Policy page. It should explain what data is used (e.g., `localStorage` for settings) and disclose the use of third-party services like Google AdSense for advertising and Google Analytics for traffic analysis.~~ (Done in v1.0.2)
-    -   **Terms of Service:** ~~Add a basic ToS page outlining the use of the tool.~~ (Done in v1.0.2)
-
--   **Progressive Web App (PWA):**
-    -   Enable offline access to the calculator and informational pages.
-    -   Allow users to "install" the app on their mobile or desktop devices for a native-like experience.
+    -   **Dark/Light Mode Transitions:** Smoother CSS transitions for theme switching.
+-   **Community & Feedback:**
+    -   **Contact Form:** Implement a contact page for user feedback using a static-site-friendly service.
+-   **Educational Hub foundations:**
+    -   Expand `about.html` into a more structured learning center.
 
 ## Mid-Term Goals (Q2-Q3 2026)
 

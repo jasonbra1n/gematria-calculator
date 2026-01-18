@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phrase Comparison - Gematria Calculator</title>
+    <meta name="description"
+        content="Compare multiple phrases side-by-side across various gematria systems. Identify matching values and patterns.">
+    <link rel="icon" href="/logo.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="header-container"></header>
+
+    <main class="container">
+        <section class="comparison-header">
+            <h1>Phrase Comparison</h1>
+            <p>Compare multiple words or phrases across your selected gematria systems.</p>
+        </section>
+
+        <section class="card comparison-input-section">
+            <h3>1. Enter Phrases</h3>
+            <div id="phrase-inputs-container" class="phrase-inputs-grid">
+                <div class="phrase-input-wrapper">
+                    <input type="text" class="phrase-input" placeholder="Enter first phrase..." data-index="0">
+                </div>
+                <div class="phrase-input-wrapper">
+                    <input type="text" class="phrase-input" placeholder="Enter second phrase..." data-index="1">
+                </div>
+                <div class="phrase-input-wrapper">
+                    <input type="text" class="phrase-input" placeholder="Enter third phrase..." data-index="2">
+                </div>
+            </div>
+            <div class="comparison-actions">
+                <button id="add-phrase-btn" class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Add Phrase
+                </button>
+            </div>
+        </section>
+
+        <section class="card system-selection-section">
+            <div class="section-header">
+                <h3>2. Select Systems</h3>
+                <div class="selection-shortcuts">
+                    <button id="select-base-systems" class="btn-link">Base Systems</button>
+                    <button id="select-all-systems" class="btn-link">Select All</button>
+                    <button id="clear-selected-systems" class="btn-link red">Clear All</button>
+                </div>
+            </div>
+
+            <div id="comparison-systems-grid" class="system-grid">
+                <!-- Systems will be populated by script.js/compare.js -->
+            </div>
+        </section>
+
+        <section class="comparison-results-section">
+            <div id="comparison-results-container">
+                <!-- Results table will be injected here -->
+                <div class="empty-results-message">
+                    <p>Enter phrases and select systems to see the comparison.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="export-actions" style="display: none;" id="export-section">
+            <button id="export-csv-btn" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Export to CSV
+            </button>
+        </section>
+    </main>
+
+    <footer id="footer-container"></footer>
+
+    <script src="cipher-manager.js"></script>
+    <script src="script.js"></script>
+    <script src="compare.js"></script>
+</body>
+
+</html>

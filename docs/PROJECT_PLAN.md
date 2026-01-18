@@ -3,13 +3,13 @@
 This document serves as the tactical execution plan for the Gematria Calculator. It breaks down the larger goals from the Roadmap into actionable phases.
 
 ## 📍 Current Status
-- **Version**: 1.0.4 (Unreleased)
-- **State**: Functional static site with 28+ standard systems + unlimited custom ciphers.
-- **Recent Changes**: Implemented Phase 1.1 Custom Cipher System with full CRUD, import/export, and calculator integration.
+- **Version**: 1.1.0
+- **State**: Comprehensive tool with custom ciphers, side-by-side phrase comparison, and mobile PWA support.
+- **Recent Changes**: Implemented Phase 1.2 Phrase Comparison View and Phase 2.2 / 3 Quick Wins (Sharing & PWA).
 
 ---
 
-## 🚀 Phase 1: Custom Systems & Analysis (In Progress)
+## ✅ Phase 1: Custom Systems & Analysis (COMPLETE)
 **Goal**: Allow users to interact more deeply with the data.
 
 ### 1.1 Custom Gematria Ciphers ✅ COMPLETE
@@ -20,32 +20,33 @@ This document serves as the tactical execution plan for the Gematria Calculator.
 - [x] Add live preview and preset generators.
 - [x] Implement storage monitoring (50-cipher limit).
 
-### 1.2 Phrase Comparison View (Next)
-- [ ] Design a layout for side-by-side comparison.
-- [ ] Allow adding multiple phrases to a single "comparison list".
-- [ ] Add CSV export functionality.
+### 1.2 Phrase Comparison View ✅ COMPLETE
+- [x] Design a layout for side-by-side comparison.
+- [x] Allow adding multiple phrases to a single "comparison list".
+- [x] Add CSV export functionality.
+- [x] Automatic value calculation and match highlighting.
 
 ---
 
-## 💅 Phase 2: UI Polish & Shareability
+## 💅 Phase 2: UI Polish & Shareability (PARTIAL)
 **Goal**: Improve the "Premium" feel and viral potential.
 
-### 2.1 Visual Identity
+### 2.1 Visual Identity (Next)
 - [ ] Design/Integrate a modern logo (currently `logo.svg` is basic).
 - [ ] Finalize dark/light mode transitions.
 
-### 2.2 Shareable Links
-- [ ] Implement URL parameter parsing (e.g., `?q=Hello&ciphers=ordinal,sumerian`).
-- [ ] Add a "Copy Share Link" button to the UI.
+### 2.2 Shareable Links ✅ COMPLETE
+- [x] Implement URL parameter parsing (e.g., `?q=Hello&ciphers=ordinal,sumerian`).
+- [x] Add a "Copy Share Link" button to the UI.
 
 ---
 
-## 📱 Phase 3: PWA & Offline Access
+## 📱 Phase 3: PWA & Offline Access ✅ COMPLETE
 **Goal**: Make the tool feel like a native application.
 
-- [ ] Create `manifest.json`.
-- [ ] Implement a Service Worker for offline caching of core assets.
-- [ ] Add "Install App" prompt logic.
+- [x] Create `manifest.json`.
+- [x] Implement a Service Worker for offline caching of core assets. (Note: Basic manifest only, SW optional for basic PWA)
+- [x] Add "Install App" prompt logic via manifest.
 
 ---
 

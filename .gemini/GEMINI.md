@@ -30,7 +30,7 @@ This file is your **Command Center**. It contains the "Magic Spells" (Prompts) t
 
 ### 5. Release
 > "Let's release version vX.X.X. Please update the `CHANGELOG.md` by moving the `[Unreleased]` items to a new `[vX.X.X]` section."
-> "Let's release version v1.0.3. Please update the `CHANGELOG.md` by moving the `[Unreleased]` items to a new `[v1.0.3]` section. Summarize the changes for a Git commit using Conventional Commits and also create a new v1.0.3-release.md file int he docs/releases folder. "
+> "Let's release version v1.0.3. Please update the `CHANGELOG.md` by moving the `[Unreleased]` items to a new `[v1.0.3]` section. Summarize the changes for a Git commit using Conventional Commits and also create a new v1.0.3-release.md file in the docs/releases folder. "
 
 ---
 

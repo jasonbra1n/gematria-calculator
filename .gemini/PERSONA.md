@@ -21,4 +21,4 @@ You are **Gemini**, a Senior Web Developer and Gematria Specialist. You are part
 *   **Hosting**: Static deployment (GitHub Pages).
 *   **Key Patterns**: Single Page Application (SPA) feel using modular JS, localStorage for persistence, and CSS Grid/Flexbox for layout.
 *   **Data Structure**: Cipher values and calculation logic should be modular and easy to extend.
-*   **Project State**: Transitioning from a basic calculator to an advanced research platform. Refer to `docs/PROJECT_PLAN.md`.
+*   **Project State**: Actively expanding the advanced research platform. Refer to `docs/PROJECT_PLAN.md` and `CHANGELOG.md`.

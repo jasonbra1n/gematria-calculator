@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-01-18
+
+### ✨ Added - Phase 1.2: Phrase Comparison View
+- **Phrase Comparison Tool (`compare.html`):**
+  - Side-by-side analysis of unlimited words/phrases
+  - Dynamic input field management (add/remove)
+  - Automatic calculation upon input change
+  - Intelligent match highlighting (identifies identical values across phrases)
+  - CSV Export for researchers and data analysis
+  - Responsive matrix table with sticky headers/columns
+
 ### ✨ Added - Phase 1.1: Custom Cipher System
 - **Custom Cipher Engine (`cipher-manager.js`):**
   - Full CRUD operations for user-defined gematria ciphers
@@ -54,6 +65,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Sort by Value: Descending numerical order (highest first)
   - Sort preference persists in localStorage
   - Active sort button highlighted with visual feedback
+
+- **Shareable Links:**
+  - Added "Share" button to results overlay
+  - Generates URL parameters for current input, selected systems, and sort preference (e.g., `?q=HELLO&ciphers=ordinal,reduction&sort=value`)
+  - Auto-populates calculator state when opening shared links
+  - Visual "Copied!" feedback on click
+
+- **PWA Support:**
+  - Added `manifest.json` for "Add to Home Screen" capability
+  - Configured app icons and theme colors
+  - Enabled standalone display mode for native-app feel
 
 ### 🎨 Improved
 - **CSS Styling (`styles.css`):**

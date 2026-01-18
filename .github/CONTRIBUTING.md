@@ -53,29 +53,34 @@ Feel free to comment on an issue to ask questions or to be assigned to it.
 
 ## Development Setup
 
-This project uses a standard modern web stack. You will need Node.js (v18 or higher) and pnpm installed on your machine.
+This project is a pure static site. You don't need to install any heavy dependencies to get started.
 
 1.  **Clone your fork:**
     ```bash
-    git clone https://github.com/<your-username>/gematria-calculator.git
+    git clone https://github.com/jasonbra1n/gematria-calculator.git
     cd gematria-calculator
     ```
 
-2.  **Install dependencies:**
-    ```bash
-    pnpm install
-    ```
+2.  **No Installation Required:**
+    Since we emphasize a zero-dependency architecture, there is no `npm install` or `pnpm install` step.
 
 3.  **Run the development server:**
-    ```bash
-    pnpm dev
-    ```
-    This will start the development server, typically at `http://localhost:5173`.
+    To avoid CORS issues with local file access (especially when using the header/footer fetches), we recommend using a simple local web server.
 
-4.  **Run tests:**
+    **Using VS Code:**
+    Install the "Live Server" extension and click "Go Live" at the bottom right.
+
+    **Using Python:**
     ```bash
-    pnpm test
+    python -m http.server 8000
     ```
+
+    **Using Node/npx:**
+    ```bash
+    npx serve
+    ```
+
+    Navigate to the local URL (e.g., `http://localhost:8000`) in your browser.
 
 ## Style Guides
 

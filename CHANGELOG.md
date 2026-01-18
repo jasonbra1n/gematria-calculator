@@ -5,6 +5,76 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### ✨ Added - Phase 1.1: Custom Cipher System
+- **Custom Cipher Engine (`cipher-manager.js`):**
+  - Full CRUD operations for user-defined gematria ciphers
+  - localStorage persistence with 50-cipher limit
+  - UUID generation for unique cipher identification
+  - Comprehensive validation (A-Z completeness, positive integers)
+  - Import/Export functionality (JSON format)
+  - Preset generators (Sequential, Reverse, Pythagorean)
+  - Storage monitoring with visual usage indicators
+  - Automatic duplicate name handling on import
+
+- **Custom Cipher Builder UI (`custom-ciphers.html`):**
+  - Dedicated page for managing custom ciphers
+  - Card-based cipher list with Edit/Delete actions
+  - Modal-based cipher builder with 26-input A-Z grid
+  - Live preview showing real-time calculations
+  - Quick-fill preset buttons for common patterns
+  - Empty state messaging for new users
+  - Import/Export interface with file validation
+  - Storage usage bar (green/orange/red indicators)
+  - Sample calculation display for each cipher
+
+- **Custom Cipher Page Logic (`custom-ciphers.js`):**
+  - Dynamic cipher list rendering
+  - Modal workflow management
+  - Preset application system
+  - Live preview updates
+  - File import/export operations
+  - Form validation and error handling
+  - XSS prevention via HTML escaping
+
+- **Main Calculator Integration:**
+  - Custom ciphers now appear in systems overlay
+  - Visual separator distinguishing custom from standard ciphers
+  - Dynamic loading on page initialization
+  - Seamless calculation integration
+  - Persistent selection in localStorage
+
+- **Navigation Enhancement:**
+  - Added "Custom Ciphers" link to header menu
+
+### 🎨 Improved
+- **CSS Styling (`styles.css`):**
+  - Added 450+ lines of custom cipher styles
+  - Responsive cipher builder grid (adapts to mobile)
+  - Dark/light mode compatibility for all new elements
+  - Hover effects and smooth transitions
+  - Mobile-first breakpoints for optimal UX
+  - Storage bar with color-coded warning states
+
+### 🔧 Modified
+- **`script.js`:**
+  - Enhanced `calculateSystemValue()` to detect and process custom ciphers
+  - Added `loadCustomCiphersIntoOverlay()` function
+  - Added `escapeHtml()` utility function
+  - Integrated CipherManager for custom cipher lookups
+
+- **`index.html`:**
+  - Added `cipher-manager.js` script reference
+
+- **`header.html`:**
+  - Added Custom Ciphers navigation link
+
+### 📝 Documentation
+- **Implementation Plan:** Created detailed technical specifications for Phase 1
+- **Task Breakdown:** Granular checklist with 100+ actionable items
+- **Walkthrough:** Comprehensive documentation with browser testing results
+
 ## [1.0.3] - 2026-01-18
 
 ### 📁 Refactor

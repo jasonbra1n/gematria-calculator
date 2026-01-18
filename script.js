@@ -293,6 +293,9 @@ function initializePage() {
     const saveBtn = document.getElementById('save-systems');
     const gematriaWord = document.getElementById('gematria-word');
 
+    // Load and inject custom ciphers into the overlay
+    loadCustomCiphersIntoOverlay();
+
     openBtn.addEventListener('click', () => overlay.style.display = 'flex');
     closeBtn.addEventListener('click', () => overlay.style.display = 'none');
     saveBtn.addEventListener('click', () => {
@@ -329,6 +332,61 @@ function initializePage() {
   }
 }
 
+/**
+ * Load custom ciphers and inject them into the systems overlay
+ */
+function loadCustomCiphersIntoOverlay() {
+  if (typeof CipherManager === 'undefined') return;
+  
+  const customCiphers = CipherManager.loadCustomCiphers();
+  if (customCiphers.length === 0) return;
+
+  const systemGrid = document.querySelector('.system-grid');
+  if (!systemGrid) return;
+
+  // Remove any existing custom cipher section
+  const existingSeparator = systemGrid.querySelector('.custom-cipher-separator');
+  if (existingSeparator) {
+    let nextElement = existingSeparator.nextElementSibling;
+    while (nextElement && nextElement.classList.contains('custom-cipher-item')) {
+      const toRemove = nextElement;
+      nextElement = nextElement.nextElementSibling;
+      toRemove.remove();
+    }
+    existingSeparator.remove();
+  }
+
+  // Add separator
+  const separator = document.createElement('div');
+  separator.className = 'custom-cipher-separator';
+  separator.style.gridColumn = '1 / -1';
+  separator.style.borderTop = '2px solid var(--border-color)';
+  separator.style.margin = '10px 0';
+  separator.style.paddingTop = '10px';
+  separator.innerHTML = '<strong style="color: var(--primary-color);">Custom Ciphers</strong>';
+  systemGrid.appendChild(separator);
+
+  // Add custom cipher checkboxes
+  customCiphers.forEach(cipher => {
+    const label = document.createElement('label');
+    label.className = 'custom-cipher-item';
+    label.innerHTML = `
+      <input type="checkbox" name="system" value="custom-${cipher.id}">
+      ${escapeHtml(cipher.name)}
+    `;
+    systemGrid.appendChild(label);
+  });
+}
+
+/**
+ * Escape HTML to prevent XSS
+ */
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
 function calculateGematria() {
   const word = document.getElementById('gematria-word').value.trim();
   const showReduced = document.getElementById('overlay-display-reduced').checked;
@@ -359,6 +417,22 @@ function calculateGematria() {
 function calculateSystemValue(word, system) {
   const upperWord = word.toUpperCase();
   let total = 0;
+  
+  // Check if this is a custom cipher
+  if (system.startsWith('custom-')) {
+    const customMap = typeof CipherManager !== 'undefined' 
+      ? CipherManager.getCustomCipherMap(system.replace('custom-', ''))
+      : null;
+    
+    if (customMap) {
+      for (const char of upperWord) {
+        total += customMap[char] || 0;
+      }
+      return total;
+    }
+    // If custom cipher not found, return 0
+    return 0;
+  }
   
   for (const char of upperWord) {
     if (system === 'alphanumeric') {

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0633259514526906"
+     crossorigin="anonymous"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SKFFH2SY55"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SKFFH2SY55');
+</script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Ciphers - Gematria Calculator</title>
+  <meta name="description" content="Create and manage your own custom gematria ciphers. Define letter-to-number mappings and save them for future calculations.">
+  <meta name="keywords" content="custom gematria, custom cipher, gematria calculator, create cipher">
+  <link rel="canonical" href="https://gematria-calculator.jasonbrain.com/custom-ciphers.html">
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gematria-calculator.jasonbrain.com/custom-ciphers.html">
+  <meta property="og:title" content="Custom Ciphers - Gematria Calculator">
+  <meta property="og:description" content="Create and manage your own custom gematria ciphers.">
+  <meta property="og:image" content="https://gematria-calculator.jasonbrain.com/assets/og-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gematria-calculator.jasonbrain.com/custom-ciphers.html">
+  <meta property="twitter:title" content="Custom Ciphers - Gematria Calculator">
+  <meta property="twitter:description" content="Create and manage your own custom gematria ciphers.">
+  <meta property="twitter:image" content="https://gematria-calculator.jasonbrain.com/assets/og-image.png">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <!-- Header content is loaded dynamically -->
+  </header>
+
+  <div class="content-card">
+    <h2>Custom Gematria Ciphers</h2>
+    <p>Create your own custom letter-to-number mappings for specialized gematria research. Your custom ciphers will be saved in your browser and available in the main calculator.</p>
+    
+    <!-- Storage Info -->
+    <div id="storage-info" class="storage-info"></div>
+
+    <!-- Cipher List -->
+    <div id="cipher-list-section">
+      <div class="section-header">
+        <h3>Your Custom Ciphers (<span id="cipher-count">0</span>/50)</h3>
+        <button type="button" class="btn-primary" id="create-new-cipher">+ Create New Cipher</button>
+      </div>
+      <div id="cipher-list" class="cipher-list">
+        <!-- Cipher cards will be inserted here -->
+      </div>
+      <div id="empty-state" class="empty-state" style="display: none;">
+        <p>You haven't created any custom ciphers yet.</p>
+        <p>Click "Create New Cipher" to get started!</p>
+      </div>
+    </div>
+
+    <!-- Import/Export Section -->
+    <div class="import-export-section">
+      <h3>Import / Export</h3>
+      <div class="import-export-grid">
+        <div class="export-section">
+          <h4>Export Ciphers</h4>
+          <p>Download your custom ciphers as a JSON file to back them up or share with others.</p>
+          <div class="export-buttons">
+            <button type="button" class="btn-systems" id="export-all-btn">Export All</button>
+            <button type="button" class="btn-systems" id="export-selected-btn" disabled>Export Selected</button>
+          </div>
+          <div id="export-selection" class="export-selection" style="display: none;">
+            <!-- Export checkboxes will be inserted here -->
+          </div>
+        </div>
+        <div class="import-section">
+          <h4>Import Ciphers</h4>
+          <p>Upload a JSON file to import custom ciphers. Duplicate names will be automatically renamed.</p>
+          <input type="file" id="import-file-input" accept=".json,application/json" style="display: none;">
+          <button type="button" class="btn-systems" id="import-btn">Choose File to Import</button>
+          <div id="import-preview" class="import-preview" style="display: none;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cipher Builder Modal -->
+  <div class="overlay" id="cipher-builder-overlay" style="display: none;">
+    <div class="overlay-content cipher-builder-content">
+      <span class="close-btn" id="close-builder">×</span>
+      <h3 id="builder-title">Create Custom Cipher</h3>
+      
+      <form id="cipher-builder-form">
+        <!-- Cipher Info -->
+        <div class="form-group">
+          <label for="cipher-name">Cipher Name *</label>
+          <input type="text" id="cipher-name" required maxlength="50" placeholder="e.g., My Custom Cipher">
+        </div>
+        
+        <div class="form-group">
+          <label for="cipher-description">Description (optional)</label>
+          <textarea id="cipher-description" rows="2" maxlength="200" placeholder="Brief description of this cipher system"></textarea>
+        </div>
+
+        <!-- Quick Fill Presets -->
+        <div class="quick-fill-section">
+          <label>Quick Fill:</label>
+          <div class="quick-fill-buttons">
+            <button type="button" class="btn-preset" data-preset="sequential">Sequential (1-26)</button>
+            <button type="button" class="btn-preset" data-preset="reverse">Reverse (26-1)</button>
+            <button type="button" class="btn-preset" data-preset="pythagorean">Pythagorean (1-9)</button>
+            <button type="button" class="btn-preset" data-preset="clear">Clear All</button>
+          </div>
+        </div>
+
+        <!-- Letter-to-Number Grid -->
+        <div class="cipher-builder-grid" id="cipher-grid">
+          <!-- Grid will be generated by JavaScript -->
+        </div>
+
+        <!-- Live Preview -->
+        <div class="cipher-preview">
+          <h4>Live Preview</h4>
+          <p>Testing with "SAMPLE TEXT":</p>
+          <div id="preview-result" class="preview-result">Enter values above to see preview</div>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+          <button type="submit" class="btn-save">Save Cipher</button>
+          <button type="button" class="btn-cancel" id="cancel-builder">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <!-- Footer content is loaded dynamically -->
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" title="Go to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+  <script src="cipher-manager.js"></script>
+  <script src="custom-ciphers.js"></script>
+</body>
+</html>

@@ -35,19 +35,20 @@ The Gematria Calculator is designed to be a comprehensive and user-friendly tool
 
 -   **Comprehensive Gematria Engine:** Instantly calculate values across **28 different gematria systems**.
 -   **Custom Cipher System:** Build, save, and import/export your own custom gematria mappings.
--   **Phrase Comparison View:** Side-by-side analysis of multiple phrases with automatic match highlighting.
+-   **Phrase Comparison View:** Side-by-side analysis of multiple phrases with a new, streamlined system selection overlay.
 -   **Extensive System Support:** Includes common systems like Ordinal, Reduction, and Standard, as well as more esoteric ones like Sumerian, Primes, and Alphanumeric Qabbala (AQ).
+-   **Educational Hub:** A completely redesigned About page featuring historical context, research resources, and a guide to mastering the systems.
 -   **Real-Time Calculation:** Results update automatically as you type for a seamless experience.
 -   **Shareable Links:** Generate and copy unique URLs that pre-populate the calculator state.
 -   **Results Sorting:** Sort calculations by name or value for better data analysis.
 -   **Modern & Responsive UI:**
+    -   **New Visual Identity:** Modern logo and smooth theme transitions.
     -   A clean, intuitive design that works seamlessly on desktop and mobile devices.
     -   **PWA Ready:** Install the calculator as an app on your mobile device.
     -   **Light & Dark Mode:** Automatically detects your system preference and includes a manual toggle.
     -   An immersive, distraction-free experience with a header and footer that intelligently hide as you scroll.
     -   A "Scroll to Top" button for easy navigation on long pages.
 -   **Informational Resources:**
-    -   **About Page:** A detailed article explaining the history, meaning, and cultural significance of gematria.
     -   **Ciphers Page:** A complete reference guide with value tables for every supported gematria system.
 
 ## 📜 License

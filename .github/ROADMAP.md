@@ -4,6 +4,15 @@ This document outlines the future direction and planned features for the Gematri
 
 The roadmap is a living document and may change based on user feedback and development priorities. As this project is hosted on GitHub Pages, features are categorized based on their feasibility within a static hosting environment. Timelines are estimates and subject to change.
 
+## Completed Milestones (v1.2.0 - January 2026)
+-   **Visual Polish:**
+    -   **Modern Logo:** New geometric-inspired logo for better brand identity.
+    -   **Smooth Transitions:** Refined CSS transitions for dark/light mode switching.
+-   **Educational Hub:**
+    -   Redesigned `about.html` into a structured research hub.
+-   **UX Improvements:**
+    -   **Comparison Overlay:** Refactored system selection in the comparison tool for better usability.
+
 ## Completed Milestones (v1.1.0 - January 2026)
 
 -   **Custom Gematria Systems:**
@@ -25,13 +34,8 @@ The roadmap is a living document and may change based on user feedback and devel
 
 These remaining features are prioritized for the next minor version (v1.2.0):
 
--   **Enhanced UI/UX:**
-    -   **New Logo:** Design a new, modern logo for the project to improve brand identity.
-    -   **Dark/Light Mode Transitions:** Smoother CSS transitions for theme switching.
 -   **Community & Feedback:**
     -   **Contact Form:** Implement a contact page for user feedback using a static-site-friendly service.
--   **Educational Hub foundations:**
-    -   Expand `about.html` into a more structured learning center.
 
 ## Mid-Term Goals (Q2-Q3 2026)
 

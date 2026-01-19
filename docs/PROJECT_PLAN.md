@@ -3,9 +3,9 @@
 This document serves as the tactical execution plan for the Gematria Calculator. It breaks down the larger goals from the Roadmap into actionable phases.
 
 ## 📍 Current Status
-- **Version**: 1.1.0
-- **State**: Comprehensive tool with custom ciphers, side-by-side phrase comparison, and mobile PWA support.
-- **Recent Changes**: Implemented Phase 1.2 Phrase Comparison View and Phase 2.2 / 3 Quick Wins (Sharing & PWA).
+- **Version**: 1.2.0
+- **State**: Comprehensive tool with enhanced UI, educational resources, and refined comparison tools.
+- **Recent Changes**: Implemented new logo, smooth transitions, educational hub, and comparison overlay.
 
 ---
 
@@ -31,9 +31,9 @@ This document serves as the tactical execution plan for the Gematria Calculator.
 ## 💅 Phase 2: UI Polish & Shareability (PARTIAL)
 **Goal**: Improve the "Premium" feel and viral potential.
 
-### 2.1 Visual Identity (Next)
-- [ ] Design/Integrate a modern logo (currently `logo.svg` is basic).
-- [ ] Finalize dark/light mode transitions.
+### 2.1 Visual Identity ✅ COMPLETE
+- [x] Design/Integrate a modern logo (currently `logo.svg` is basic).
+- [x] Finalize dark/light mode transitions.
 
 ### 2.2 Shareable Links ✅ COMPLETE
 - [x] Implement URL parameter parsing (e.g., `?q=Hello&ciphers=ordinal,sumerian`).
@@ -53,7 +53,7 @@ This document serves as the tactical execution plan for the Gematria Calculator.
 ## 📚 Phase 4: Content & Internationalization
 **Goal**: Broaden the audience and educational value.
 
-- [ ] **Learn Section**: Expand `about.html` into a multi-page hub.
+- [x] **Learn Section**: Expand `about.html` into a multi-page hub (Initial Educational Hub completed in v1.2.0).
 - [ ] **i18n**: Refactor code to support language dictionaries, starting with Hebrew/Greek support.
 
 ---

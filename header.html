@@ -7,14 +7,24 @@
   <!-- Mobile navigation links will be populated by script.js -->
 </div>
 <a href="/" class="logo">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon">
-    <path d="M4 7V4h16v3" />
-    <path d="M9 20h6" />
-    <path d="M12 4v16" />
-    <rect x="2" y="7" width="20" height="5" rx="1" />
-    <path d="M8 15h2" />
-    <path d="M14 15h2" />
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class="logo-icon" width="32" height="32">
+    <!-- Outer Circles -->
+    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="280 40"
+      stroke-linecap="round" opacity="0.2" />
+    <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="180 40"
+      stroke-linecap="round" opacity="0.4" />
+
+    <!-- Stylized G path -->
+    <path d="M75 50 C75 35 65 25 50 25 C35 25 25 35 25 50 C25 65 35 75 50 75 C60 75 70 70 73 60" fill="none"
+      stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+    <path d="M50 50 L75 50" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+
+    <!-- Nodes / Dots -->
+    <circle cx="50" cy="25" r="2.5" fill="currentColor" />
+    <circle cx="25" cy="50" r="2.5" fill="currentColor" />
+    <circle cx="50" cy="75" r="2.5" fill="currentColor" />
+    <circle cx="75" cy="50" r="2.5" fill="currentColor" />
+    <circle cx="50" cy="50" r="3" fill="currentColor" />
   </svg>
   <span class="logo-title">Gematria</span>
 </a>

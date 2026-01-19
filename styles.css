@@ -35,7 +35,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 header {
@@ -49,7 +49,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 header.header-hidden {
@@ -175,7 +175,7 @@ header nav a {
   color: var(--systems-color);
   text-decoration: none;
   font-size: 1.1em;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 header nav a:hover {
@@ -188,7 +188,7 @@ header nav a:hover {
   border: 1px solid var(--border-color);
   background-color: var(--systems-color);
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s ease;
 }
 
 .theme-icon {
@@ -206,6 +206,7 @@ header nav a:hover {
 
 #theme-toggle:hover {
   background-color: var(--hover-systems);
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -236,8 +237,7 @@ header nav a:hover {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 20px;
-  flex: 1;
-  /* Pushes footer down */
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .gematria-calculator h2 {
@@ -357,6 +357,12 @@ header nav a:hover {
   min-width: 120px;
   text-align: center;
   border: 1px solid var(--border-color);
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.2s ease;
+}
+
+.result-column:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .system-name {
@@ -537,10 +543,21 @@ legend {
   text-decoration: underline;
 }
 
+/* About Page Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.primary-card {
+  border-top: 4px solid var(--primary-color) !important;
+}
+
 @media (max-width: 600px) {
-  .content-card {
-    margin: 15px 10px;
-    padding: 15px;
+  .about-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -608,6 +625,12 @@ footer a:hover {
   width: 220px;
   text-align: center;
   border: 1px solid var(--border-color);
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, transform 0.2s ease;
+}
+
+.cipher-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .cipher-card h3 {
@@ -784,6 +807,20 @@ footer a:hover {
 }
 
 /* Cipher List */
+/* Comparison Page Actions */
+.comparison-actions-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .comparison-actions-row button {
+    width: 100%;
+  }
+}
+
 .cipher-list {
   display: grid;
   gap: 15px;
@@ -1252,19 +1289,49 @@ footer a:hover {
 
 .phrase-input {
   width: 100%;
-  padding: 12px 15px;
+  padding: 12px 40px 12px 15px;
+  /* Added right padding for close button */
   border: 1px solid var(--border-color);
   border-radius: 6px;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-size: 1rem;
   transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+  /* Fixes "too long" width issue */
 }
 
 .phrase-input:focus {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.remove-phrase-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--reset-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: color 0.3s, background-color 0.3s;
+  z-index: 2;
+}
+
+.remove-phrase-btn:hover {
+  color: var(--error-color);
+  background-color: rgba(255, 68, 68, 0.1);
 }
 
 .comparison-actions {

@@ -23,7 +23,7 @@
 <body>
     <header id="header-container"></header>
 
-    <main class="container">
+    <main class="gematria-calculator">
         <section class="comparison-header">
             <h1>Phrase Comparison</h1>
             <p>Compare multiple words or phrases across your selected gematria systems.</p>
@@ -42,7 +42,13 @@
                     <input type="text" class="phrase-input" placeholder="Enter third phrase..." data-index="2">
                 </div>
             </div>
-            <div class="comparison-actions">
+        </section>
+
+        <section class="card comparison-actions-section">
+            <div class="comparison-actions-row">
+                <button type="button" class="btn-systems" id="open-systems-overlay">
+                    Select Comparison Systems
+                </button>
                 <button id="add-phrase-btn" class="btn btn-secondary">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -51,21 +57,6 @@
                     </svg>
                     Add Phrase
                 </button>
-            </div>
-        </section>
-
-        <section class="card system-selection-section">
-            <div class="section-header">
-                <h3>2. Select Systems</h3>
-                <div class="selection-shortcuts">
-                    <button id="select-base-systems" class="btn-link">Base Systems</button>
-                    <button id="select-all-systems" class="btn-link">Select All</button>
-                    <button id="clear-selected-systems" class="btn-link red">Clear All</button>
-                </div>
-            </div>
-
-            <div id="comparison-systems-grid" class="system-grid">
-                <!-- Systems will be populated by script.js/compare.js -->
             </div>
         </section>
 
@@ -90,6 +81,26 @@
             </button>
         </section>
     </main>
+
+    <!-- Systems Overlay -->
+    <div class="overlay" id="systems-overlay">
+        <div class="overlay-content">
+            <span class="close-btn" id="close-overlay">×</span>
+            <h3>Select Gematria Systems</h3>
+            <fieldset>
+                <legend>Available Systems</legend>
+                <div id="comparison-systems-grid" class="system-grid">
+                    <!-- Systems will be populated by compare.js -->
+                </div>
+            </fieldset>
+            <div class="overlay-buttons">
+                <button type="button" class="btn-select-base" id="select-base-systems">Select Base</button>
+                <button type="button" class="btn-select-all" id="select-all-systems">Select All</button>
+                <button type="button" class="btn-clear" id="clear-selected-systems">Clear</button>
+            </div>
+            <button type="button" class="btn-save" id="save-systems">Save & Compare</button>
+        </div>
+    </div>
 
     <footer id="footer-container"></footer>
 

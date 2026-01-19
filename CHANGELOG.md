@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-01-19
+
+### ✨ Added
+- **Visual Identity:**
+  - New modern SVG logo featuring geometric nodes and concentric circles.
+  - Smooth CSS3 transitions for seamless Light/Dark mode switching.
+- **Educational Hub:**
+  - Complete redesign of `about.html` into a responsive grid layout.
+  - Added historical context and research resources.
+- **Phrase Comparison:**
+  - Refactored system selection into a dedicated overlay (matching the main calculator experience).
+  - Improved mobile responsiveness by removing the large static grid.
+
+### 🐛 Fixed
+- **Phrase Comparison UI:** 
+  - Applied standard `.gematria-calculator` card styling for visual consistency with other pages.
+  - Fixed input width overflow issue by applying proper box-sizing.
+  - Corrected positioning of the "remove phrase" (X) button to ensure it stays inline with the input field.
+
 ## [1.1.0] - 2026-01-18
 
 ### ✨ Added - Phase 1.2: Phrase Comparison View

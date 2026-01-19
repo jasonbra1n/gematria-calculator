@@ -13,23 +13,28 @@ function initComparisonPage() {
     const addPhraseBtn = document.getElementById('add-phrase-btn');
     const inputsContainer = document.getElementById('phrase-inputs-container');
     const systemsGrid = document.getElementById('comparison-systems-grid');
+    const overlay = document.getElementById('systems-overlay');
+    const openBtn = document.getElementById('open-systems-overlay');
+    const closeBtn = document.getElementById('close-overlay');
+    const saveBtn = document.getElementById('save-systems');
 
     // 1. Populate systems grid (standard + custom)
     populateComparisonSystems();
 
-    // 2. Add phrase input event listener
-    addPhraseBtn.addEventListener('click', addPhraseInput);
-
-    // 3. Delegate input events for all phrase inputs
-    inputsContainer.addEventListener('input', (e) => {
-        if (e.target.classList.contains('phrase-input')) {
-            runComparison();
-        }
+    // 2. Overlay controls
+    openBtn.addEventListener('click', () => overlay.style.display = 'flex');
+    closeBtn.addEventListener('click', () => overlay.style.display = 'none');
+    saveBtn.addEventListener('click', () => {
+        overlay.style.display = 'none';
+        runComparison();
     });
 
-    // 4. Delegate click events for system checkboxes
-    systemsGrid.addEventListener('change', (e) => {
-        if (e.target.type === 'checkbox') {
+    // 3. Add phrase input event listener
+    addPhraseBtn.addEventListener('click', addPhraseInput);
+
+    // 4. Delegate input events for all phrase inputs
+    inputsContainer.addEventListener('input', (e) => {
+        if (e.target.classList.contains('phrase-input')) {
             runComparison();
         }
     });
@@ -37,30 +42,28 @@ function initComparisonPage() {
     // 5. Selection Shortcuts
     document.getElementById('select-base-systems').addEventListener('click', () => {
         const baseSystems = ['ordinal', 'reverse', 'reduction', 'reverse-reduction'];
-        document.querySelectorAll('#comparison-systems-grid input[type="checkbox"]').forEach(cb => {
+        systemsGrid.querySelectorAll('input[type="checkbox"]').forEach(cb => {
             cb.checked = baseSystems.includes(cb.value);
         });
-        runComparison();
+        // We don't auto-calculate here to stay consistent with overlay behavior
     });
 
     document.getElementById('select-all-systems').addEventListener('click', () => {
-        document.querySelectorAll('#comparison-systems-grid input[type="checkbox"]').forEach(cb => {
+        systemsGrid.querySelectorAll('input[type="checkbox"]').forEach(cb => {
             cb.checked = true;
         });
-        runComparison();
     });
 
     document.getElementById('clear-selected-systems').addEventListener('click', () => {
-        document.querySelectorAll('#comparison-systems-grid input[type="checkbox"]').forEach(cb => {
+        systemsGrid.querySelectorAll('input[type="checkbox"]').forEach(cb => {
             cb.checked = false;
         });
-        runComparison();
     });
 
     // 6. CSV Export
     document.getElementById('export-csv-btn').addEventListener('click', exportToCSV);
 
-    // Initial run if there's any content (though usually empty at start)
+    // Initial run
     runComparison();
 }
 

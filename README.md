@@ -44,7 +44,8 @@ The Gematria Calculator is designed to be a comprehensive and user-friendly tool
 -   **Modern & Responsive UI:**
     -   **New Visual Identity:** Modern logo and smooth theme transitions.
     -   A clean, intuitive design that works seamlessly on desktop and mobile devices.
-    -   **PWA Ready:** Install the calculator as an app on your mobile device.
+    -   **PWA Ready:** Install the calculator as an app on your mobile device for offline usage.
+-   **Server-Side Utilities:** Powered by PHP 8.4 for enhanced performance and security.
     -   **Light & Dark Mode:** Automatically detects your system preference and includes a manual toggle.
     -   An immersive, distraction-free experience with a header and footer that intelligently hide as you scroll.
     -   A "Scroll to Top" button for easy navigation on long pages.

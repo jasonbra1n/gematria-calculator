@@ -12,7 +12,9 @@
 <TECH_STACK>
 Refer to `docs/PROJECT_PLAN.md` for architecture details.
 - **Frontend**: Vanilla HTML5, CSS3 (Modern features like Flex/Grid), and Vanilla JavaScript (ES6+).
-- **Hosting**: Static site optimized for GitHub Pages.
+- **Backend**: PHP 8.4 (for utilities like contact forms and database lookups).
+- **Hosting**: cPanel-managed web hosting (Apache).
+- **Security**: Private repository; SSL enforced via .htaccess.
 - **State Management**: Browser `localStorage` for user preferences and custom data.
 </TECH_STACK>
 
@@ -24,7 +26,7 @@ Refer to `docs/PROJECT_PLAN.md` for architecture details.
     - `root`: Main application files (`index.html`, `script.js`, `styles.css`) and modular logic (`cipher-manager.js`, `compare.js`).
 - **JS Style**: Functional programming where appropriate, clean modular functions, and descriptive variable names.
 - **CSS Style**: Premium aesthetics, dark/light mode support, and responsive design.
-- **Documentation**: Keep the `CHANGELOG.md` updated with every significant change.
+- **Documentation**: Keep the `CHANGELOG.md` updated with every significant change. **IMPORTANT**: Always place new entries under the `## [Unreleased]` section. Never increment the version number or create new version headers; only the user is authorized to perform release increments.
 </CODING_CONVENTIONS>
 
 <ROADMAP>

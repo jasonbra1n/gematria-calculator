@@ -20,7 +20,7 @@
   <meta name="description"
     content="Create and manage your own custom gematria ciphers. Define letter-to-number mappings and save them for future calculations.">
   <meta name="keywords" content="custom gematria, custom cipher, gematria calculator, create cipher">
-  <link rel="canonical" href="https://gematria-calculator.jasonbrain.com/custom-ciphers.html">
+  <link rel="canonical" href="https://gematria-calculator.jasonbrain.com/custom-ciphers">
   <link rel="icon" href="/logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
@@ -28,14 +28,14 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://gematria-calculator.jasonbrain.com/custom-ciphers.html">
+  <meta property="og:url" content="https://gematria-calculator.jasonbrain.com/custom-ciphers">
   <meta property="og:title" content="Custom Ciphers - Gematria Calculator">
   <meta property="og:description" content="Create and manage your own custom gematria ciphers.">
   <meta property="og:image" content="https://gematria-calculator.jasonbrain.com/assets/og-image.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://gematria-calculator.jasonbrain.com/custom-ciphers.html">
+  <meta property="twitter:url" content="https://gematria-calculator.jasonbrain.com/custom-ciphers">
   <meta property="twitter:title" content="Custom Ciphers - Gematria Calculator">
   <meta property="twitter:description" content="Create and manage your own custom gematria ciphers.">
   <meta property="twitter:image" content="https://gematria-calculator.jasonbrain.com/assets/og-image.png">

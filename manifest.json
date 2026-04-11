@@ -54,7 +54,7 @@
       "name": "Custom Ciphers",
       "short_name": "Ciphers",
       "description": "Manage custom ciphers",
-      "url": "/custom-ciphers.html",
+      "url": "/custom-ciphers",
       "icons": [{ "src": "/logo.svg", "sizes": "any" }]
     }
   ]

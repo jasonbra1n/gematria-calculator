@@ -59,4 +59,4 @@ This document serves as the tactical execution plan for the Gematria Calculator.
 ---
 
 ## 🛠️ Database Schema (Future / Phase 5)
-*Note: Currently static. This section will be populated if/ when we move to a BaaS like Firebase or Supabase.*
+*Note: The project has migrated to cPanel (PHP 8.4). MySQL/MariaDB integration is now possible for storing shared phrases or a reverse-lookup dictionary.*

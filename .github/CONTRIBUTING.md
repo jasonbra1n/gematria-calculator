@@ -14,6 +14,7 @@ This document provides guidelines for contributing to the project.
 - [Development Setup](#development-setup)
 - [Style Guides](#style-guides)
   - [Git Commit Messages](#git-commit-messages)
+  - [Changelog Management](#changelog-management)
   - [Code Style](#code-style)
 
 ## Code of Conduct
@@ -93,6 +94,14 @@ Examples:
 - `fix: Correct calculation for single-digit reduction`
 - `docs: Update README with new feature details`
 - `style: Reformat cipher data files with Prettier`
+
+### Changelog Management
+
+We follow the [Keep a Changelog](https://keepachangelog.com/) format. To maintain a consistent release history, follow these rules when updating `CHANGELOG.md`:
+
+- **All New Items Go to [Unreleased]:** Always place new features, fixes, or changes under the `## [Unreleased]` section.
+- **Do Not Increment Versions:** AI assistants and contributors should **never** decide on or increment the version number. This is handled exclusively by the maintainer.
+- **Maintain Sections:** Group changes into standard categories: `✨ Added`, `🎨 Improved`, `🔧 Modified`, `🐛 Fixed`, `📁 Refactor`, `📝 Documentation`.
 
 ### Code Style
 

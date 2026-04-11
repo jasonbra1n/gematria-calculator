@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gematria-calculator.jasonbrain.com/</loc>
-    <lastmod>2025-11-17</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://gematria-calculator.jasonbrain.com/ciphers.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://gematria-calculator.jasonbrain.com/ciphers</loc>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gematria-calculator.jasonbrain.com/about.html</loc>
-    <lastmod>2025-11-17</lastmod>
+    <loc>https://gematria-calculator.jasonbrain.com/about</loc>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

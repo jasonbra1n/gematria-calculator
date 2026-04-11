@@ -31,10 +31,10 @@
 <div class="header-right">
   <nav>
     <a href="/">Calculator</a>
-    <a href="/custom-ciphers.html">Custom Ciphers</a>
-    <a href="/compare.html">Compare</a>
-    <a href="/about.html">About</a>
-    <a href="/ciphers.html">Ciphers</a>
+    <a href="/custom-ciphers">Custom Ciphers</a>
+    <a href="/compare">Compare</a>
+    <a href="/about">About</a>
+    <a href="/ciphers">Ciphers</a>
   </nav>
   <button id="theme-toggle">
     <svg class="theme-icon sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

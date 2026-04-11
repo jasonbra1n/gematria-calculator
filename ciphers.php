@@ -17,20 +17,20 @@
   <title>Gematria Ciphers - Explore Numerology Systems</title>
   <meta name="description" content="Learn about gematria ciphers and their letter-to-value mappings. Explore systems like Ordinal, Standard, Alphanumeric Qabbala (AQ), and more with detailed tables.">
   <meta name="keywords" content="gematria ciphers, numerology systems, gematria tables, alphanumeric qabbala, gematria explained">
-  <link rel="canonical" href="https://gematria-calculator.jasonbrain.com/ciphers.html">
+  <link rel="canonical" href="https://gematria-calculator.jasonbrain.com/ciphers">
   <link rel="icon" href="/logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://gematria-calculator.jasonbrain.com/ciphers.html">
+  <meta property="og:url" content="https://gematria-calculator.jasonbrain.com/ciphers">
   <meta property="og:title" content="Gematria Ciphers - Explore Numerology Systems">
   <meta property="og:description" content="Learn about gematria ciphers and their letter-to-value mappings. Explore systems like Ordinal, Standard, and more.">
   <meta property="og:image" content="https://gematria-calculator.jasonbrain.com/assets/og-image.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://gematria-calculator.jasonbrain.com/ciphers.html">
+  <meta property="twitter:url" content="https://gematria-calculator.jasonbrain.com/ciphers">
   <meta property="twitter:title" content="Gematria Ciphers - Explore Numerology Systems">
   <meta property="twitter:description" content="Learn about gematria ciphers and their letter-to-value mappings. Explore systems like Ordinal, Standard, and more.">
   <meta property="twitter:image" content="https://gematria-calculator.jasonbrain.com/assets/og-image.png">
@@ -45,7 +45,7 @@
     <h2>Gematria Ciphers</h2>
     <div class="content-card">
       <h3>About the Ciphers</h3>
-      <p>These tables show the character-to-value mappings for various gematria systems, from Ordinal to Alphanumeric Qabbala (AQ, where 0-9 = 0-9, A-Z = 10-35), used in our <a href="/">Gematria Calculator</a>. For a deeper dive into gematria’s history and the significance of systems like AQ, visit our <a href="/about.html">About Gematria</a> page.</p>
+      <p>These tables show the character-to-value mappings for various gematria systems, from Ordinal to Alphanumeric Qabbala (AQ, where 0-9 = 0-9, A-Z = 10-35), used in our <a href="/">Gematria Calculator</a>. For a deeper dive into gematria’s history and the significance of systems like AQ, visit our <a href="/about">About Gematria</a> page.</p>
     </div>
     <div id="cipher-tables"></div>
   </div>

@@ -2,7 +2,7 @@
 
 This document outlines the future direction and planned features for the Gematria Calculator. Our mission is to build the best open-source gematria calculator—a tool that is not only powerful and comprehensive but also a valuable educational resource for the community.
 
-The roadmap is a living document and may change based on user feedback and development priorities. As this project is hosted on GitHub Pages, features are categorized based on their feasibility within a static hosting environment. Timelines are estimates and subject to change.
+The roadmap is a living document and may change based on user feedback and development priorities. As this project is now hosted on cPanel with PHP 8.4 support, we are re-prioritizing backend features like native contact forms and word databases. Timelines are estimates and subject to change.
 
 ## Completed Milestones (v1.2.0 - January 2026)
 -   **Visual Polish:**
@@ -52,7 +52,9 @@ These are larger client-side features that will require more significant develop
 
 -   **Basic Reverse Lookup:**
     -   Find words that match a specific numerical value from a pre-compiled list of common English words.
-    -   *Note: A comprehensive, real-time reverse lookup would require a backend service.*
+    -   *Update:* Now feasible with PHP 8.4 backend. 
+-   **Native Contact Form:**
+    -   Implement a contact page using PHP `mail()` or a dedicated mail library instead of third-party static services.
 
 ## Long-Term Vision (2027 and Beyond)
 

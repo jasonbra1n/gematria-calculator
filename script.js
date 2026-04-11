@@ -148,7 +148,7 @@ const alphanumericQabbalaMap = {
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header');
   if (header) {
-    fetch('/header.html')
+    fetch('/header.php')
       .then(response => response.text())
       .then(data => {
         header.innerHTML = data;
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const footer = document.querySelector('footer');
   if (footer) {
-    fetch('/footer.html')
+    fetch('/footer.php')
       .then(response => response.text())
       .then(data => {
         footer.innerHTML = data;

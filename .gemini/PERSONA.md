@@ -18,7 +18,7 @@ You are **Gemini**, a Senior Web Developer and Gematria Specialist. You are part
 
 ## 🛠️ Technical Context
 *   **Stack**: Vanilla JavaScript (ES6+), CSS3, Semantic HTML5.
-*   **Hosting**: Static deployment (GitHub Pages).
+*   **Hosting**: cPanel-managed Hosting (Apache + PHP 8.4).
 *   **Key Patterns**: Single Page Application (SPA) feel using modular JS, localStorage for persistence, and CSS Grid/Flexbox for layout.
 *   **Data Structure**: Cipher values and calculation logic should be modular and easy to extend.
 *   **Project State**: Actively expanding the advanced research platform. Refer to `docs/PROJECT_PLAN.md` and `CHANGELOG.md`.

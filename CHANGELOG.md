@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### ✨ Added
+- **Server-Side Architecture:**
+  - Migrated the application from static GitHub Pages to cPanel-based web hosting.
+  - Full support for PHP 8.4, enabling future server-side features.
+  - Conversion of all core pages from `.html` to `.php` for backend flexibility.
+- **Advanced Routing & SEO:**
+  - Implemented `.htaccess` for **Clean URLs** (e.g., `/about` instead of `/about.php`).
+  - Enforced site-wide HTTPS for enhanced security.
+  - Optimized `sitemap.xml` and `robots.txt` for clean URL structures.
+  - Synchronized Open Graph, Twitter, and Canonical meta tags across all pages.
+- **Performance:**
+  - Configured intelligent caching headers via `.htaccess` for images, CSS, and JS.
+
+### 🔧 Modified
+- **Project Structure:**
+  - Repository transitioned to **Private** status.
+  - Removed legacy `CNAME` file.
+  - Updated all internal navigation links to use extension-less clean URLs.
+- **Documentation:**
+  - Updated `README.md`, `ROADMAP.md`, and `PROJECT_PLAN.md` to reflect the new technology stack and private repository status.
+  - Re-prioritized backend features (Native Contact Form, word database) in the roadmap.
+
 ## [1.2.0] - 2026-01-19
 
 ### ✨ Added

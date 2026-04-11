@@ -68,7 +68,7 @@
     <h3>What is Gematria?</h3>
     <p>Gematria is a numerology system that assigns numerical values to words or phrases, revealing connections between
       them. Rooted in Jewish tradition, it’s widely used in Kabbalah and Rabbinic texts. Learn more on our <a
-        href="/about.html">About Gematria</a> page or explore the systems on our <a href="/ciphers.html">Ciphers
+        href="/about">About Gematria</a> page or explore the systems on our <a href="/ciphers">Ciphers
         page</a>.</p>
     <h3>How to Use This Tool</h3>
     <p>Enter a word or phrase, select your preferred gematria systems, and get instant results. Perfect for researchers,

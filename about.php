@@ -20,13 +20,13 @@
     content="Discover the history and meaning of gematria, a numerology system rooted in Jewish tradition. Learn about systems like Alphanumeric Qabbala (AQ) and their applications.">
   <meta name="keywords"
     content="gematria history, gematria meaning, numerology explained, kabbalah gematria, alphanumeric qabbala">
-  <link rel="canonical" href="https://gematria-calculator.jasonbrain.com/about.html">
+  <link rel="canonical" href="https://gematria-calculator.jasonbrain.com/about">
   <link rel="icon" href="/logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://gematria-calculator.jasonbrain.com/about.html">
+  <meta property="og:url" content="https://gematria-calculator.jasonbrain.com/about">
   <meta property="og:title" content="About Gematria - History and Meaning">
   <meta property="og:description"
     content="Discover the history and meaning of gematria, a numerology system rooted in Jewish tradition.">
@@ -34,7 +34,7 @@
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://gematria-calculator.jasonbrain.com/about.html">
+  <meta property="twitter:url" content="https://gematria-calculator.jasonbrain.com/about">
   <meta property="twitter:title" content="About Gematria - History and Meaning">
   <meta property="twitter:description"
     content="Discover the history and meaning of gematria, a numerology system rooted in Jewish tradition.">
@@ -78,9 +78,9 @@
 
       <div class="content-card primary-card">
         <h3>Mastering the Systems</h3>
-        <p>Ready to dive deep? Explore our <a href="/ciphers.html">Ciphers Reference</a> to see detailed tables for
+        <p>Ready to dive deep? Explore our <a href="/ciphers">Ciphers Reference</a> to see detailed tables for
           every system, from <b>Sumerian</b> to <b>Fibonacci</b>.</p>
-        <p>You can even create your own systems using our <a href="/custom-ciphers.html">Custom Cipher Creator</a>!</p>
+        <p>You can even create your own systems using our <a href="/custom-ciphers">Custom Cipher Creator</a>!</p>
         <div class="cta-row" style="margin-top: 20px;">
           <a href="/" class="btn-calculate" style="text-decoration: none; display: inline-block;">Start Calculating
             Now</a>

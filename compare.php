@@ -7,10 +7,27 @@
     <title>Phrase Comparison - Gematria Calculator</title>
     <meta name="description"
         content="Compare multiple phrases side-by-side across various gematria systems. Identify matching values and patterns.">
+    <link rel="canonical" href="https://gematria-calculator.jasonbrain.com/compare">
     <link rel="icon" href="/logo.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#4CAF50">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gematria-calculator.jasonbrain.com/compare">
+    <meta property="og:title" content="Phrase Comparison - Gematria Calculator">
+    <meta property="og:description"
+        content="Compare multiple phrases side-by-side across various gematria systems. Identify matching values and patterns.">
+    <meta property="og:image" content="https://gematria-calculator.jasonbrain.com/assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gematria-calculator.jasonbrain.com/compare">
+    <meta property="twitter:title" content="Phrase Comparison - Gematria Calculator">
+    <meta property="twitter:description"
+        content="Compare multiple phrases side-by-side across various gematria systems. Identify matching values and patterns.">
+    <meta property="twitter:image" content="https://gematria-calculator.jasonbrain.com/assets/og-image.png">
 
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">

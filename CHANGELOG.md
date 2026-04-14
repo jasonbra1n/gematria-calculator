@@ -21,8 +21,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Enforced site-wide HTTPS for enhanced security.
   - Optimized `sitemap.xml` and `robots.txt` for clean URL structures.
   - Synchronized Open Graph, Twitter, and Canonical meta tags across all pages.
-- **Performance:**
-  - Configured intelligent caching headers via `.htaccess` for images, CSS, and JS.
+- **Project Management & Skills:**
+  - Established a formal **Project Maintenance Skill** to standardize releases and git synchronization.
+  - Implemented a **Centralized Versioning System** via `config.php` for site-wide version tracking.
+  - Enforced a new project-local asset policy: all generated images are now stored in the repository's `assets/` directory.
 
 ### 🔧 Modified
 - **Project Structure:**
@@ -34,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Removed project-wide GitHub links and icons to reflect private repository status.
   - Fixed sticky footer positioning to ensure it remains at the bottom of the viewport on short pages.
   - Centered the "Scroll to Top" button for a more balanced UI layout.
+  - Added dynamic **Version & Last Updated** tags to the global footer and About page for research transparency.
 - **Documentation:**
   - Updated `README.md`, `ROADMAP.md`, and `PROJECT_PLAN.md` to reflect the new technology stack and private repository status.
   - Re-prioritized backend features (Native Contact Form, word database) in the roadmap.

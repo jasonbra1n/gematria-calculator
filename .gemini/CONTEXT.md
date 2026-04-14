@@ -26,7 +26,7 @@ Refer to `docs/PROJECT_PLAN.md` for architecture details.
     - `root`: Main application files (`index.php`, `script.js`, `styles.css`) and modular logic (`cipher-manager.js`, `compare.js`).
 - **JS Style**: Functional programming where appropriate, clean modular functions, and descriptive variable names.
 - **CSS Style**: Premium aesthetics, dark/light mode support, and responsive design.
-- **Documentation**: Keep the `CHANGELOG.md` updated with every significant change. **IMPORTANT**: Always place new entries under the `## [Unreleased]` section. Assistants may only perform version increments when executing a formal Release Procedure as defined in the **Project Maintenance Skill**.
+- **Documentation**: Keep the `CHANGELOG.md` updated with every significant change. **IMPORTANT**: Always place new entries under the `## [Unreleased]` section. Assistants may only perform version increments when executing a formal Release Procedure as defined in the **Project Maintenance Skill**. All documentation edits must follow the strictly additive, non-destructive rules defined in the **Documentation Sentinel Skill**.
 </CODING_CONVENTIONS>
 
 <ROADMAP>

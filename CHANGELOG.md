@@ -21,8 +21,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Enforced site-wide HTTPS for enhanced security.
   - Optimized `sitemap.xml` and `robots.txt` for clean URL structures.
   - Synchronized Open Graph, Twitter, and Canonical meta tags across all pages.
+- **Performance:**
+  - Configured intelligent caching headers via `.htaccess` for images, CSS, and JS.
 - **Project Management & Skills:**
   - Established a formal **Project Maintenance Skill** to standardize releases and git synchronization.
+  - Established a formal **Documentation Sentinel Skill** to ensure non-destructive logging.
   - Implemented a **Centralized Versioning System** via `config.php` for site-wide version tracking.
   - Enforced a new project-local asset policy: all generated images are now stored in the repository's `assets/` directory.
 

@@ -3,7 +3,7 @@
 This document serves as the tactical execution plan for the Gematria Calculator. It breaks down the larger goals from the Roadmap into actionable phases.
 
 ## 📍 Current Status
-- **Version**: 1.2.0
+- **Version**: 1.2.1
 - **State**: Comprehensive tool with enhanced UI, educational resources, and refined comparison tools.
 - **Recent Changes**: Implemented new logo, smooth transitions, educational hub, and comparison overlay.
 
@@ -58,5 +58,12 @@ This document serves as the tactical execution plan for the Gematria Calculator.
 
 ---
 
-## 🛠️ Database Schema (Future / Phase 5)
+## 🌎 Phase 5: Branding & Infrastructure
+**Goal**: Establish a standalone presence.
+
+- [ ] **Custom Domain Acquisition**:
+    - Evaluate `gematriaresearch.com` for brand viability.
+    - Plan migration if purchase is finalized in mid-2026.
+
+## 🛠️ Database Schema (Future / Phase 6)
 *Note: The project has migrated to cPanel (PHP 8.4). MySQL/MariaDB integration is now possible for storing shared phrases or a reverse-lookup dictionary.*

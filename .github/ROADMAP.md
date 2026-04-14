@@ -56,7 +56,13 @@ These are larger client-side features that will require more significant develop
 -   **Basic Reverse Lookup:**
     -   Find words that match a specific numerical value from a pre-compiled list of common English words.
     -   *Update:* Now feasible with PHP 8.4 backend. 
--   **Native Contact Form:** DONE (v1.2.1-dev).
+- - **Native Contact Form:** DONE (v1.2.1).
+- **Spam Protection & Rate Limiting:** DONE (v1.2.1).
+
+## 🏢 Infrastructure & Branding (Q2 2026)
+- **Custom Domain Acquisition:**
+    - Evaluate and potentially acquire a dedicated domain (e.g., `gematriaresearch.com`) to establish a standalone brand identity.
+    - Revisit investment viability in late April 2026.
 
 ## Long-Term Vision (2027 and Beyond)
 

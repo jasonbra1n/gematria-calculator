@@ -5,13 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.2.1] - 2026-04-13
 
 ### ✨ Added
 - **Server-Side Architecture:**
   - Migrated the application from static GitHub Pages to cPanel-based web hosting.
   - Full support for PHP 8.4, enabling future server-side features.
   - Conversion of all core pages from `.html` to `.php` for backend flexibility.
+- **Community & Feedback:**
+  - Implemented a new **Native Contact Form** (`/contact`) using PHP 8.4 `mail()`.
+  - Added modern, glassmorphic form design with real-time validation feedback.
+  - Configured custom subject prefixing `[Gematria]` for organized inbox management.
 - **Advanced Routing & SEO:**
   - Implemented `.htaccess` for **Clean URLs** (e.g., `/about` instead of `/about.php`).
   - Enforced site-wide HTTPS for enhanced security.
@@ -25,6 +29,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Repository transitioned to **Private** status.
   - Removed legacy `CNAME` file.
   - Updated all internal navigation links to use extension-less clean URLs.
+  - Added "Contact" link to global navigation (header and mobile menu).
+- **Brand & Identity:**
+  - Removed project-wide GitHub links and icons to reflect private repository status.
+  - Fixed sticky footer positioning to ensure it remains at the bottom of the viewport on short pages.
+  - Centered the "Scroll to Top" button for a more balanced UI layout.
 - **Documentation:**
   - Updated `README.md`, `ROADMAP.md`, and `PROJECT_PLAN.md` to reflect the new technology stack and private repository status.
   - Re-prioritized backend features (Native Contact Form, word database) in the roadmap.

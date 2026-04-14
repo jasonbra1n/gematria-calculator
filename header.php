@@ -35,6 +35,7 @@
     <a href="/compare">Compare</a>
     <a href="/about">About</a>
     <a href="/ciphers">Ciphers</a>
+    <a href="/contact">Contact</a>
   </nav>
   <button id="theme-toggle">
     <svg class="theme-icon sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

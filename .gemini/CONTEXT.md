@@ -23,10 +23,10 @@ Refer to `docs/PROJECT_PLAN.md` for architecture details.
 - **Directory Structure**:
     - `.github/`: Project management (ROADMAP, CONTRIBUTING).
     - `docs/`: Long-form documentation, releases, and legal (PRIVACY, TOS).
-    - `root`: Main application files (`index.html`, `script.js`, `styles.css`) and modular logic (`cipher-manager.js`, `compare.js`).
+    - `root`: Main application files (`index.php`, `script.js`, `styles.css`) and modular logic (`cipher-manager.js`, `compare.js`).
 - **JS Style**: Functional programming where appropriate, clean modular functions, and descriptive variable names.
 - **CSS Style**: Premium aesthetics, dark/light mode support, and responsive design.
-- **Documentation**: Keep the `CHANGELOG.md` updated with every significant change. **IMPORTANT**: Always place new entries under the `## [Unreleased]` section. Never increment the version number or create new version headers; only the user is authorized to perform release increments.
+- **Documentation**: Keep the `CHANGELOG.md` updated with every significant change. **IMPORTANT**: Always place new entries under the `## [Unreleased]` section. Assistants may only perform version increments when executing a formal Release Procedure as defined in the **Project Maintenance Skill**.
 </CODING_CONVENTIONS>
 
 <ROADMAP>

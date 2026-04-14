@@ -11,6 +11,9 @@ The roadmap is a living document and may change based on user feedback and devel
 -   **Educational Hub:**
     -   Redesigned `about.html` into a structured research hub.
 -   **UX Improvements:**
+    - **Community & Feedback:**
+    -   **Native Contact Form:** Implemented a secure PHP-based contact form for user feedback with automated email notifications.
+- **UX Improvements:**
     -   **Comparison Overlay:** Refactored system selection in the comparison tool for better usability.
 
 ## Completed Milestones (v1.1.0 - January 2026)
@@ -35,7 +38,7 @@ The roadmap is a living document and may change based on user feedback and devel
 These remaining features are prioritized for the next minor version (v1.2.0):
 
 -   **Community & Feedback:**
-    -   **Contact Form:** Implement a contact page for user feedback using a static-site-friendly service.
+    -   **Contact Form:** DONE (Implemented as Native PHP Form).
 
 ## Mid-Term Goals (Q2-Q3 2026)
 
@@ -53,8 +56,7 @@ These are larger client-side features that will require more significant develop
 -   **Basic Reverse Lookup:**
     -   Find words that match a specific numerical value from a pre-compiled list of common English words.
     -   *Update:* Now feasible with PHP 8.4 backend. 
--   **Native Contact Form:**
-    -   Implement a contact page using PHP `mail()` or a dedicated mail library instead of third-party static services.
+-   **Native Contact Form:** DONE (v1.2.1-dev).
 
 ## Long-Term Vision (2027 and Beyond)
 

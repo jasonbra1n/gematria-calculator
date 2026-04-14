@@ -82,8 +82,7 @@
           every system, from <b>Sumerian</b> to <b>Fibonacci</b>.</p>
         <p>You can even create your own systems using our <a href="/custom-ciphers">Custom Cipher Creator</a>!</p>
         <div class="cta-row" style="margin-top: 20px;">
-          <a href="/" class="btn-calculate" style="text-decoration: none; display: inline-block;">Start Calculating
-            Now</a>
+          <a href="/" class="btn-calculate">Start Calculating Now</a>
         </div>
       </div>
     </div>

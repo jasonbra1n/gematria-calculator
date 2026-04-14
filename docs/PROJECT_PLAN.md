@@ -53,7 +53,7 @@ This document serves as the tactical execution plan for the Gematria Calculator.
 ## 📚 Phase 4: Content & Internationalization
 **Goal**: Broaden the audience and educational value.
 
-- [x] **Learn Section**: Expand `about.html` into a multi-page hub (Initial Educational Hub completed in v1.2.0).
+- [x] **Learn Section**: Expand `about.php` into a multi-page hub (Initial Educational Hub completed in v1.2.0).
 - [ ] **i18n**: Refactor code to support language dictionaries, starting with Hebrew/Greek support.
 
 ---

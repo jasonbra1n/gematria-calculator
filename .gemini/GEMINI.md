@@ -13,7 +13,7 @@ This file is your **Command Center**. It contains the "Magic Spells" (Prompts) t
 
 ### 1. Start of Session (The "Quick Sync")
 *Use this to instantly load the project context:*
-> "Please read all the project context files (`.gemini/CONTEXT.md`, `.gemini/PERSONA.md`, `.github/ROADMAP.md`, `.github/CONTRIBUTING.md`, `docs/PROJECT_PLAN.md`) to get in sync with the current state of the project."
+> "Please check for any **Agent Skills** (Knowledge Items) and read all the project context files (`.gemini/CONTEXT.md`, `.gemini/PERSONA.md`, `.github/ROADMAP.md`, `.github/CONTRIBUTING.md`, `docs/PROJECT_PLAN.md`) to get in sync with the current state of the project."
 
 ### 2. Feature Development
 > "Let's implement the '[Feature Name]' feature from the project plan."
@@ -37,7 +37,7 @@ This file is your **Command Center**. It contains the "Magic Spells" (Prompts) t
 ## 🧠 Manual Context Setter (Fallback)
 *If the Quick Sync doesn't work, paste this:*
 > "You are an expert Frontend Developer and Gematria Specialist building the 'Gematria Calculator'.
-> **Stack:** Vanilla JS (ES6+), CSS3 (Flex/Grid), HTML5. Static Site (GitHub Pages).
+> **Stack:** PHP 8.4, Vanilla JS (ES6+), CSS3 (Flex/Grid). Hosted on cPanel/Apache.
 > **Objective:** Mathematical precision, high performance, and a premium research-focused UI.
 > **Philosophy:** Zero-dependency, lightweight, and accessible."
 

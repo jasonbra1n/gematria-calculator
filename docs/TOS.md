@@ -1,6 +1,6 @@
 # Terms of Service for Gematria Calculator
 
-**Last Updated:** December 10, 2025
+**Last Updated:** April 13, 2026
 
 Welcome to the Gematria Calculator website (the "Service"). These Terms of Service ("Terms") govern your use of our website. Please read them carefully.
 
@@ -10,7 +10,7 @@ By accessing or using the Service, you agree to be bound by these Terms. If you 
 
 ## 2. Description of Service
 
-The Gematria Calculator is a free, open-source tool designed for informational, educational, and entertainment purposes. It provides calculations based on various gematria systems. The information provided by the Service is not intended to be a substitute for professional advice.
+The Gematria Calculator is a private research tool designed for informational, educational, and entertainment purposes. It provides calculations based on various gematria systems. The information provided by the Service is not intended to be a substitute for professional advice.
 
 ## 3. Use of the Service
 
@@ -28,7 +28,7 @@ In no event shall the creators or contributors of the Gematria Calculator be lia
 
 ## 6. Intellectual Property
 
-The Service and its original content, features, and functionality are and will remain the exclusive property of the Gematria Calculator project and its licensors. The project is licensed under the MIT License.
+The Service and its original content, features, and functionality are and will remain the exclusive property of the Gematria Calculator project and its owner. This project is a private research tool; all rights reserved.
 
 ## 7. Changes to These Terms
 
@@ -40,7 +40,7 @@ These Terms shall be governed and construed in accordance with the laws of the j
 
 ## 9. Contact Us
 
-If you have any questions about these Terms, please contact us through the contact form on our website or by opening an issue on our [GitHub repository](https://github.com/jasonbra1n/gematria-calculator/issues).
+If you have any questions about these Terms, please contact us through the contact form on our website.
 
 ---
 

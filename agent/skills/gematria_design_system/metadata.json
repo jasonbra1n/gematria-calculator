@@ -1,0 +1,9 @@
+{
+  "title": "Gematria Calculator Design System",
+  "summary": "Core design tokens, component patterns, and accessibility guidelines for the Gematria Calculator project. Enforces high contrast for buttons and dark mode synchronization.",
+  "timestamp": "2026-04-13T22:25:00Z",
+  "references": [
+    "docs/STYLE_GUIDE.md",
+    "styles.css"
+  ]
+}

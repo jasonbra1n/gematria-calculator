@@ -1,6 +1,6 @@
 # Privacy Policy for Gematria Calculator
 
-**Last Updated:** December 10, 2025
+**Last Updated:** April 13, 2026
 
 Your privacy is important to us. This Privacy Policy explains how your information is collected, used, and disclosed by the Gematria Calculator website.
 
@@ -32,7 +32,7 @@ Users may opt out of personalized advertising by visiting Ads Settings.
 
 ## Contact Us
 
-If you have any questions about this Privacy Policy, please contact us through the contact form on our website or by opening an issue on our GitHub repository.
+If you have any questions about this Privacy Policy, please contact us through the contact form on our website.
 
 ## Changes to This Policy
 

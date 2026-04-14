@@ -295,18 +295,52 @@ header nav a:hover {
   margin-top: 10px;
 }
 
-.gematria-calculator button {
-  padding: 10px 15px;
+.gematria-calculator button,
+.btn-calculate,
+.btn-reset,
+.btn-systems,
+.btn-select-base,
+.btn-select-all,
+.btn-clear,
+.btn-save,
+.btn-submit {
+  padding: 10px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gematria-calculator button:hover,
+.btn-calculate:hover,
+.btn-reset:hover,
+.btn-systems:hover,
+.btn-select-base:hover,
+.btn-select-all:hover,
+.btn-clear:hover,
+.btn-save:hover,
+.btn-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gematria-calculator button:active,
+.btn-calculate:active,
+.btn-submit:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .btn-calculate {
   background-color: var(--primary-color);
-  color: white;
+  color: white !important;
 }
 
 .btn-calculate:hover {
@@ -324,7 +358,7 @@ header nav a:hover {
 
 .btn-systems {
   background-color: var(--systems-color);
-  color: white;
+  color: white !important;
 }
 
 .btn-systems:hover {
@@ -418,11 +452,6 @@ header nav a:hover {
 
 .overlay-buttons button {
   flex: 1;
-  padding: 8px 12px;
-  border-radius: 4px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .btn-select-base {
@@ -448,8 +477,6 @@ header nav a:hover {
   background: var(--overlay-action-color);
   color: white;
   width: 100%;
-  padding: 12px;
-  font-size: 16px;
 }
 
 .btn-save:hover {
@@ -569,7 +596,7 @@ footer {
   color: var(--text-color);
   border-top: 1px solid var(--border-color);
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
-  margin-top: 20px;
+  margin-top: auto;
   position: sticky;
   bottom: 0;
   width: 100%;
@@ -760,7 +787,7 @@ footer a:hover {
 #scroll-to-top {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  left: 50%;
   background-color: var(--systems-color);
   color: white;
   border: none;
@@ -773,7 +800,7 @@ footer a:hover {
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(100px);
+  transform: translateX(-50%) translateY(100px);
   transition: opacity 0.3s, visibility 0.3s, transform 0.3s ease-in-out;
   z-index: 999;
 }
@@ -781,7 +808,7 @@ footer a:hover {
 #scroll-to-top.visible {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 #scroll-to-top:hover {
@@ -1441,4 +1468,84 @@ footer a:hover {
   .comparison-header h1 {
     font-size: 1.8rem;
   }
+}
+
+/* ========================================
+   FORM & CONTACT STYLES
+   ======================================== */
+
+.contact-form-container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+.form-group input, 
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.success-message {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.error-message {
+  background-color: rgba(255, 68, 68, 0.1);
+  border: 1px solid var(--error-color);
+  color: var(--error-color);
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--hover-primary);
 }

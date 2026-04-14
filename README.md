@@ -4,15 +4,9 @@
   <a href="https://gematria-calculator.jasonbrain.com/">
     <img alt="Website" src="https://img.shields.io/website?up_message=online&down_message=offline&label=gematria-calculator.jasonbrain.com&url=https%3A%2F%2Fgematria-calculator.jasonbrain.com%2F">
   </a>
-  <a href="LICENSE">
-    <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
-  </a>
-  <a href=".github/CONTRIBUTING.md">
-    <img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg">
-  </a>
 </p>
 
-A modern, feature-rich online calculator for finding the numerical value of words or phrases using various gematria systems.
+A private, feature-rich research tool for finding the numerical value of words or phrases using various gematria systems.
 
 ## Demo
 
@@ -25,7 +19,7 @@ You can try the calculator live at: **[gematria-calculator.jasonbrain.com](https
 
 ## ℹ️ Project Information
 
--   **Contributing:** Interested in helping out? Check out our [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md) guide.
+-   **Maintenance:** Documentation for project maintenance can be found in [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md).
 -   **Roadmap:** See what's planned for the future in our [.github/ROADMAP.md](.github/ROADMAP.md).
 -   **Privacy Policy:** Read our [docs/PRIVACY.md](docs/PRIVACY.md) to understand how your data is handled.
 -   **Terms of Service:** Review our [docs/TOS.md](docs/TOS.md) before using the service.
@@ -52,9 +46,9 @@ The Gematria Calculator is designed to be a comprehensive and user-friendly tool
 -   **Informational Resources:**
     -   **Ciphers Page:** A complete reference guide with value tables for every supported gematria system.
 
-## 📜 License
+## 📜 License & Privacy
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is a private research tool. All rights reserved. For more information, please see our [docs/PRIVACY.md](docs/PRIVACY.md) and [docs/TOS.md](docs/TOS.md).
 
 ## � Usage
 

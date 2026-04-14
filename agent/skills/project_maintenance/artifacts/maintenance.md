@@ -36,3 +36,4 @@ Only perform a release when explicitly instructed by the user to "cut a version"
 - **Rule #1**: Never increment the version number unless performing the formal "Version Release Procedure."
 - **Rule #2**: Always keep `CHANGELOG.md` as the source of truth for project history.
 - **Rule #3**: Maintain consistent file headers and metadata in all release artifacts.
+- **Rule #4**: All generated images and assets must be saved to the project's `assets/` directory (e.g., `assets/blog/`) to ensure the repository remains self-contained.

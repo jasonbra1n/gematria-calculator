@@ -1,3 +1,4 @@
+<?php require_once 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,6 +85,15 @@
         <div class="cta-row" style="margin-top: 20px;">
           <a href="/" class="btn-calculate">Start Calculating Now</a>
         </div>
+      </div>
+
+      <div class="content-card primary-card">
+        <h3>Version & Research Integrity</h3>
+        <p>The Gematria Research Hub is a proprietary, actively maintained platform. We ensure mathematical precision across all supported systems.</p>
+        <p><strong>Current Version:</strong> v<?php echo APP_VERSION; ?></p>
+        <p><strong>Status:</strong> <?php echo RESEARCH_HUB_STATUS; ?></p>
+        <p><strong>Last Significant Update:</strong> <?php echo LAST_UPDATED; ?></p>
+        <p>For research queries or feature suggestions, please use our <a href="/contact">Contact Form</a>.</p>
       </div>
     </div>
   </div>

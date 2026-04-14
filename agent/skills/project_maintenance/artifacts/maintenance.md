@@ -21,8 +21,9 @@ Only perform a release when explicitly instructed by the user to "cut a version"
 1.  **Preparation**:
     - Ensure all changes are verified and documented in the `[Unreleased]` section of `CHANGELOG.md`.
     - Identify the target version (e.g., `v1.2.1`).
-2.  **Changelog Update**:
+2.  **Changelog & Config Update**:
     - Relocate all items from `## [Unreleased]` to a new header: `## [X.X.X] - YYYY-MM-DD`.
+    - Update `APP_VERSION` and `LAST_UPDATED` in `config.php` to match the release.
 3.  **Release Artifacts**:
     - Create a technical summary in `docs/releases/vX.X.X-release.md`.
     - Create a blog-formatted update in `docs/blog/vX.X.X Post.html`.

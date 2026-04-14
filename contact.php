@@ -18,8 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cooldown = 60; // 60 seconds between sends
     
     if (!empty($honeypot) || $time_elapsed < 3) {
-        // Shadow Ban: Show success but don't send anything
+        // Shadow Ban: Show slightly different success for testing
         $message_sent = true;
+        $success_signal = " (SB)"; 
     } elseif (($current_time - $last_send) < $cooldown) {
         $error_message = "Please wait a moment before sending another message.";
     } else {
@@ -36,8 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $to = ADMIN_EMAIL;
             $subject = "[Gematria] " . $subject_input;
             $body = "Name: $name\nEmail: $email\n\nMessage:\n$message_content";
-            $headers = "From: $email" . "\r\n" .
-                       "Reply-To: $email" . "\r\n" .
+            
+            // Modern headers for better deliverability
+            $headers = "From: Gematria Research Hub <noreply@gematria-calculator.jasonbrain.com>" . "\r\n" .
+                       "Reply-To: $name <$email>" . "\r\n" .
                        "X-Mailer: PHP/" . phpversion();
 
             if (mail($to, $subject, $body, $headers)) {
@@ -96,7 +99,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <?php if ($message_sent): ?>
         <div class="content-card success-message">
           <h3>Message Sent!</h3>
-          <p>Thank you for reaching out. We have received your message and will get back to you soon.</p>
+          <div class="success-message">
+          Thank you! Your message has been sent.<?php echo $success_signal ?? ''; ?>
+          <br>
           <a href="/" class="btn-calculate" style="margin-top: 10px;">Return to Calculator</a>
         </div>
       <?php else: ?>

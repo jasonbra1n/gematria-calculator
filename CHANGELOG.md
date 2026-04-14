@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Implemented a new **Native Contact Form** (`/contact`) using PHP 8.4 `mail()`.
   - Added modern, glassmorphic form design with real-time validation feedback.
   - Configured custom subject prefixing `[Gematria]` for organized inbox management.
+  - Implemented **Dual-Layer Spam Protection**:
+    - **Honeypot Field**: Silently rejects automated bot submissions.
+    - **Submission Timer**: Prevents rapid-fire scripted submissions (under 3s).
+    - **Session Rate Limiting**: Enforced a 60-second cooldown between message sends to prevent abuse.
 - **Advanced Routing & SEO:**
   - Implemented `.htaccess` for **Clean URLs** (e.g., `/about` instead of `/about.php`).
   - Enforced site-wide HTTPS for enhanced security.

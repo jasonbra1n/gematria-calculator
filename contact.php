@@ -1,29 +1,51 @@
 <?php
+session_start();
+require_once 'config.php';
 $message_sent = false;
 $error_message = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = strip_tags(trim($_POST["name"]));
-    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $subject_input = strip_tags(trim($_POST["subject"]));
-    $message_content = strip_tags(trim($_POST["message"]));
-
-    if (empty($name) || empty($email) || empty($subject_input) || empty($message_content)) {
-        $error_message = "All fields are required.";
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error_message = "Invalid email format.";
+    // 1. Honeypot check (Invisible to humans, filled by bots)
+    $honeypot = $_POST["website"] ?? '';
+    
+    // 2. Submission Timer check (Bots submit too fast)
+    $form_time = $_POST["form_time"] ?? 0;
+    $current_time = time();
+    $time_elapsed = $current_time - $form_time;
+    
+    // 3. Rate Limiting (Session-based cooldown)
+    $last_send = $_SESSION['last_submission_time'] ?? 0;
+    $cooldown = 60; // 60 seconds between sends
+    
+    if (!empty($honeypot) || $time_elapsed < 3) {
+        // Shadow Ban: Show success but don't send anything
+        $message_sent = true;
+    } elseif (($current_time - $last_send) < $cooldown) {
+        $error_message = "Please wait a moment before sending another message.";
     } else {
-        $to = "jb@jasonbrain.com";
-        $subject = "[Gematria] " . $subject_input;
-        $body = "Name: $name\nEmail: $email\n\nMessage:\n$message_content";
-        $headers = "From: $email" . "\r\n" .
-                   "Reply-To: $email" . "\r\n" .
-                   "X-Mailer: PHP/" . phpversion();
+        $name = strip_tags(trim($_POST["name"]));
+        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $subject_input = strip_tags(trim($_POST["subject"]));
+        $message_content = strip_tags(trim($_POST["message"]));
 
-        if (mail($to, $subject, $body, $headers)) {
-            $message_sent = true;
+        if (empty($name) || empty($email) || empty($subject_input) || empty($message_content)) {
+            $error_message = "All fields are required.";
+        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $error_message = "Invalid email format.";
         } else {
-            $error_message = "Failed to send message. Please try again later.";
+            $to = ADMIN_EMAIL;
+            $subject = "[Gematria] " . $subject_input;
+            $body = "Name: $name\nEmail: $email\n\nMessage:\n$message_content";
+            $headers = "From: $email" . "\r\n" .
+                       "Reply-To: $email" . "\r\n" .
+                       "X-Mailer: PHP/" . phpversion();
+
+            if (mail($to, $subject, $body, $headers)) {
+                $message_sent = true;
+                $_SESSION['last_submission_time'] = time();
+            } else {
+                $error_message = "Failed to send message. Please try again later.";
+            }
         }
     }
 }
@@ -102,6 +124,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <label for="message">Message</label>
               <textarea id="message" name="message" required placeholder="How can we help?"><?php echo isset($_POST['message']) ? htmlspecialchars($_POST['message']) : ''; ?></textarea>
             </div>
+            <!-- Anti-Spam (Visually Hidden) -->
+            <div class="vh">
+              <label for="website">Please leave this field blank:</label>
+              <input type="text" name="website" id="website" value="" tabindex="-1" autocomplete="off">
+              <input type="hidden" name="form_time" value="<?php echo time(); ?>">
+            </div>
+
             <button type="submit" class="btn-submit">Send Message</button>
           </form>
         </div>

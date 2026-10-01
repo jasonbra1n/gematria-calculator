@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **UI & Interaction Polish:**
   - Added dynamic `@keyframes pulse-match` pulsing glow animation for highlighted matched values in the Phrase Comparison view.
   - Enhanced contact form and input fields with glassmorphic styling, semi-transparent backgrounds, and focus elevation transitions (`styles.css`).
+- **Security & Embed Architecture:**
+  - Configured Content-Security-Policy `frame-ancestors` in `.htaccess` to enable authorized iframe embedding across `brainav.ca`, `blog.brainav.ca`, `jasonbrain.com`, and Blogger, unsetting restrictive `X-Frame-Options: SAMEORIGIN`.
 
 ## [1.2.1] - 2026-04-13
 

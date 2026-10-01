@@ -41,7 +41,8 @@ RewriteRule ^ /%1 [R=301,L]
 # 5. Security Headers
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
-    Header set X-Frame-Options "SAMEORIGIN"
+    Header unset X-Frame-Options
+    Header set Content-Security-Policy "frame-ancestors 'self' https://*.brainav.ca https://brainav.ca https://*.jasonbrain.com https://jasonbrain.com https://*.blogspot.com https://*.blogger.com;"
     Header set X-XSS-Protection "1; mode=block"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>

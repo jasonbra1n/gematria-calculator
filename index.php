@@ -110,6 +110,7 @@
           <label><input type="checkbox" name="system" value="septenary"> Septenary</label>
           <label><input type="checkbox" name="system" value="keypad"> Keypad</label>
           <label><input type="checkbox" name="system" value="alphanumeric"> Alphanumeric Qabbala (AQ)</label>
+          <label><input type="checkbox" name="system" value="greek-isopsephy"> Greek Isopsephy</label>
         </div>
       </fieldset>
       <div class="overlay-reduced-section" style="margin-top: 15px;">

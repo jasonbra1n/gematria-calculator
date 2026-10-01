@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### ✨ Added
+- **Greek Isopsephy (Greek Gematria):**
+  - Integrated the classical 27-character Milesian/Ionic Greek isopsephy cipher mapping units (1–9), tens (10–90), and hundreds (100–900).
+  - Included support for obsolete/archaic Greek numeral characters:
+    - Digamma / Stigma (`Ϝ`, `ϝ`, `Ϛ`, `ϛ` = 6)
+    - Koppa (`Ϙ`, `ϙ`, `Ϟ`, `ϟ` = 90)
+    - Sampi (`Ͳ`, `ͳ`, `Ϡ`, `ϡ` = 900)
+    - Standard, medial, terminal, and lunate sigma variants (`Σ`, `σ`, `ς`, `Ϲ`, `ϲ` = 200).
+  - Implemented Unicode `NFD` polytonic diacritic normalization to strip accents, breathing marks, and subscripts (`[\u0300-\u036f\u1dc0-\u1dff]`), allowing biblical and classical phrases (e.g., Ἰησοῦς = 888, χξϛ = 666) to compute accurately.
+  - Added Greek Isopsephy selection option to the calculator overlay modal (`index.php`).
+  - Added a dedicated canonical Greek alphabet breakdown table to the Ciphers reference page (`ciphers.php`).
+  - Integrated Greek Isopsephy cipher into the multi-phrase comparison tool matrix (`compare.js`).
+- **UI & Interaction Polish:**
+  - Added dynamic `@keyframes pulse-match` pulsing glow animation for highlighted matched values in the Phrase Comparison view.
+  - Enhanced contact form and input fields with glassmorphic styling, semi-transparent backgrounds, and focus elevation transitions (`styles.css`).
+
 ## [1.2.1] - 2026-04-13
 
 ### ✨ Added

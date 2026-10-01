@@ -80,7 +80,8 @@ function populateComparisonSystems() {
         'single-reverse-reduction', 'ep-exception', 'ehp-exception', 
         'primes', 'trigonal', 'squares', 'fibonacci', 
         'reverse-primes', 'reverse-trigonal', 'reverse-squares', 
-        'chaldean', 'septenary', 'keypad', 'alphanumeric'
+        'chaldean', 'septenary', 'keypad', 'alphanumeric',
+        'greek-isopsephy'
     ];
 
     let html = '';

@@ -45,7 +45,7 @@
     <h2>Gematria Ciphers</h2>
     <div class="content-card">
       <h3>About the Ciphers</h3>
-      <p>These tables show the character-to-value mappings for various gematria systems, from Ordinal to Alphanumeric Qabbala (AQ, where 0-9 = 0-9, A-Z = 10-35), used in our <a href="/">Gematria Calculator</a>. For a deeper dive into gematria’s history and the significance of systems like AQ, visit our <a href="/about">About Gematria</a> page.</p>
+      <p>These tables show the character-to-value mappings for various gematria systems, from English Ordinal and Alphanumeric Qabbala (AQ) to classical Greek Isopsephy, used in our <a href="/">Gematria Calculator</a>. For a deeper dive into gematria’s history and the significance of systems like AQ and Isopsephy, visit our <a href="/about">About Gematria</a> page.</p>
     </div>
     <div id="cipher-tables"></div>
   </div>

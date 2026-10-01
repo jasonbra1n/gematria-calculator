@@ -100,9 +100,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="content-card success-message">
           <h3>Message Sent!</h3>
           <div class="success-message">
-          Thank you! Your message has been sent.<?php echo $success_signal ?? ''; ?>
-          <br>
-          <a href="/" class="btn-calculate" style="margin-top: 10px;">Return to Calculator</a>
+            Thank you! Your message has been sent.<?php echo $success_signal ?? ''; ?>
+            <br>
+            <a href="/" class="btn-calculate" style="margin-top: 10px;">Return to Calculator</a>
+          </div>
         </div>
       <?php else: ?>
         <div class="content-card">

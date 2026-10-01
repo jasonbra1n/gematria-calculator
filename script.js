@@ -145,6 +145,41 @@ const alphanumericQabbalaMap = {
   S: 28, T: 29, U: 30, V: 31, W: 32, X: 33, Y: 34, Z: 35
 };
 
+const greekIsopsephyMap = {
+  // Units (1-9)
+  'Α': 1, 'α': 1,
+  'Β': 2, 'β': 2,
+  'Γ': 3, 'γ': 3,
+  'Δ': 4, 'δ': 4,
+  'Ε': 5, 'ε': 5,
+  'Ϝ': 6, 'ϝ': 6, 'Ϛ': 6, 'ϛ': 6, // Digamma / Stigma (archaic numeral 6)
+  'Ζ': 7, 'ζ': 7,
+  'Η': 8, 'η': 8,
+  'Θ': 9, 'θ': 9,
+
+  // Tens (10-90)
+  'Ι': 10, 'ι': 10,
+  'Κ': 20, 'κ': 20,
+  'Λ': 30, 'λ': 30,
+  'Μ': 40, 'μ': 40,
+  'Ν': 50, 'ν': 50,
+  'Ξ': 60, 'ξ': 60,
+  'Ο': 70, 'ο': 70,
+  'Π': 80, 'π': 80,
+  'Ϙ': 90, 'ϙ': 90, 'Ϟ': 90, 'ϟ': 90, // Koppa (archaic / numeral 90)
+
+  // Hundreds (100-900)
+  'Ρ': 100, 'ρ': 100,
+  'Σ': 200, 'σ': 200, 'ς': 200, 'Ϲ': 200, 'ϲ': 200, // Sigma (standard, final, lunate)
+  'Τ': 300, 'τ': 300,
+  'Υ': 400, 'υ': 400,
+  'Φ': 500, 'φ': 500, 'ϕ': 500,
+  'Χ': 600, 'χ': 600,
+  'Ψ': 700, 'ψ': 700,
+  'Ω': 800, 'ω': 800,
+  'Ͳ': 900, 'ͳ': 900, 'Ϡ': 900, 'ϡ': 900 // Sampi (archaic / numeral 900)
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header');
   if (header) {
@@ -476,6 +511,7 @@ function sortResults(results, sortBy) {
  */
 function getSystemDisplayName(system) {
   if (system === 'alphanumeric') return 'Alphanumeric Qabbala (AQ)';
+  if (system === 'greek-isopsephy') return 'Greek Isopsephy';
   if (system.startsWith('custom-')) {
     const cipher = typeof CipherManager !== 'undefined' 
       ? CipherManager.getCipherById(system.replace('custom-', ''))
@@ -489,6 +525,17 @@ function getSystemDisplayName(system) {
 }
 
 function calculateSystemValue(word, system) {
+  if (system === 'greek-isopsephy') {
+    const normalized = word.normalize("NFD").replace(/[\u0300-\u036f\u1dc0-\u1dff]/g, "");
+    let total = 0;
+    for (const char of normalized) {
+      if (greekIsopsephyMap[char] !== undefined) {
+        total += greekIsopsephyMap[char];
+      }
+    }
+    return total;
+  }
+
   const upperWord = word.toUpperCase();
   let total = 0;
   
@@ -749,19 +796,67 @@ function displayCipherTables() {
     'Chaldean': chaldeanMap,
     'Septenary': septenaryMap,
     'Keypad': keypadMap,
-    'Alphanumeric Qabbala': alphanumericQabbalaMap
+    'Alphanumeric Qabbala': alphanumericQabbalaMap,
+    'Greek Isopsephy': greekIsopsephyMap
   };
 
   let tablesHTML = '';
   for (const [name, map] of Object.entries(cipherMaps)) {
+    let tableContent = '';
+    if (name === 'Greek Isopsephy') {
+      tableContent = generateGreekTable();
+    } else if (map) {
+      tableContent = generateTable(map);
+    } else {
+      tableContent = generateDynamicTable(name.toLowerCase().replace(/ /g, '-'));
+    }
     tablesHTML += `
       <div class="cipher-card">
         <h3>${name}</h3>
-        ${map ? generateTable(map) : generateDynamicTable(name.toLowerCase().replace(/ /g, '-'))}
+        ${tableContent}
       </div>
     `;
   }
   container.innerHTML = `<div class="cipher-container">${tablesHTML}</div>`;
+}
+
+function generateGreekTable() {
+  const greekLetters = [
+    { name: 'Α α (Alpha)', value: 1 },
+    { name: 'Β β (Beta)', value: 2 },
+    { name: 'Γ γ (Gamma)', value: 3 },
+    { name: 'Δ δ (Delta)', value: 4 },
+    { name: 'Ε ε (Epsilon)', value: 5 },
+    { name: 'Ϝ ϝ / ϛ (Digamma/Stigma)', value: 6 },
+    { name: 'Ζ ζ (Zeta)', value: 7 },
+    { name: 'Η η (Eta)', value: 8 },
+    { name: 'Θ θ (Theta)', value: 9 },
+    { name: 'Ι ι (Iota)', value: 10 },
+    { name: 'Κ κ (Kappa)', value: 20 },
+    { name: 'Λ λ (Lambda)', value: 30 },
+    { name: 'Μ μ (Mu)', value: 40 },
+    { name: 'Ν ν (Nu)', value: 50 },
+    { name: 'Ξ ξ (Xi)', value: 60 },
+    { name: 'Ο ο (Omicron)', value: 70 },
+    { name: 'Π π (Pi)', value: 80 },
+    { name: 'Ϙ ϙ / ϟ (Koppa)', value: 90 },
+    { name: 'Ρ ρ (Rho)', value: 100 },
+    { name: 'Σ σ / ς (Sigma)', value: 200 },
+    { name: 'Τ τ (Tau)', value: 300 },
+    { name: 'Υ υ (Upsilon)', value: 400 },
+    { name: 'Φ φ (Phi)', value: 500 },
+    { name: 'Χ χ (Chi)', value: 600 },
+    { name: 'Ψ ψ (Psi)', value: 700 },
+    { name: 'Ω ω (Omega)', value: 800 },
+    { name: 'Ͳ ͳ / ϡ (Sampi)', value: 900 }
+  ];
+
+  let tableHTML = '<table><tr><th>Letter</th><th>Value</th></tr>';
+  for (const item of greekLetters) {
+    tableHTML += `<tr><td>${item.name}</td><td>${item.value}</td></tr>`;
+  }
+  tableHTML += '</table>';
+  return tableHTML;
 }
 
 function generateTable(map) {

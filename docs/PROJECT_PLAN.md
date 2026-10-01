@@ -54,7 +54,9 @@ This document serves as the tactical execution plan for the Gematria Calculator.
 **Goal**: Broaden the audience and educational value.
 
 - [x] **Learn Section**: Expand `about.php` into a multi-page hub (Initial Educational Hub completed in v1.2.0).
-- [ ] **i18n**: Refactor code to support language dictionaries, starting with Hebrew/Greek support.
+- [x] **Greek Isopsephy**: Implement classical 27-character Greek numeral cipher (isopsephy) with archaic numeral support (Ϝ/Ϛ=6, Ϙ/Ϟ=90, Ͳ/Ϡ=900), polytonic diacritic normalization, and UI integration.
+- [ ] **Greek US Keyboard Input / Transliteration**: Research and implement UX solutions for Latin QWERTY keyboard users (Beta Code mapping, virtual Greek keyboard bar, or input helper).
+- [ ] **Hebrew Gematria & i18n**: Expand language dictionaries and support for Hebrew gematria.
 
 ---
 

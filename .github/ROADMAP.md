@@ -51,6 +51,8 @@ These are larger client-side features that will require more significant develop
 
 -   **Internationalization (i18n):**
     -   Support for non-English alphabets, starting with Hebrew and Greek, which are fundamental to historical gematria.
+        -   *Update:* Greek Isopsephy cipher added with full 27-letter classical and archaic mapping and polytonic normalization.
+        -   *To Do:* Greek US Keyboard Input / Transliteration: Research and implement optimal UX for users typing on standard Latin/US QWERTY keyboards (evaluating Beta Code / Greeklish phonetic transliteration, on-screen Greek character palettes, or contextual character hints).
     -   Translate the UI into multiple languages.
 
 -   **Basic Reverse Lookup:**

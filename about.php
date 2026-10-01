@@ -73,7 +73,7 @@
         <h3>Modern Research</h3>
         <p>Today, gematria is a tool for researchers, mathematicians, and spiritual seekers. It helps analyze linguistic
           patterns across DIFFERENT languages and time periods.</p>
-        <p>Our platform supports over 28 systems, including the popular <b>Alphanumeric Qabbala (AQ)</b>, which bridges
+        <p>Our platform supports <?php echo TOTAL_CIPHERS; ?> systems, including classical <b>Greek Isopsephy</b> and the popular <b>Alphanumeric Qabbala (AQ)</b>, which bridges
           ancient techniques with the English alphabet (A=10...Z=35).</p>
       </div>
 

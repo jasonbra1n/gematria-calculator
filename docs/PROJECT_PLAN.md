@@ -3,9 +3,9 @@
 This document serves as the tactical execution plan for the Gematria Calculator. It breaks down the larger goals from the Roadmap into actionable phases.
 
 ## 📍 Current Status
-- **Version**: 1.2.1
-- **State**: Comprehensive tool with enhanced UI, educational resources, and refined comparison tools.
-- **Recent Changes**: Implemented new logo, smooth transitions, educational hub, and comparison overlay.
+- **Version**: 1.2.2
+- **State**: Comprehensive tool with 29 ciphers including historical Greek Isopsephy, comparison matrix, and educational hub.
+- **Recent Changes**: Integrated classical Greek Isopsephy cipher with polytonic normalization, archaic numeral support, and comparison view pulse animations.
 
 ---
 

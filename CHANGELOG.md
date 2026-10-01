@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.2] - 2026-10-01
+
 ### ✨ Added
 - **Greek Isopsephy (Greek Gematria):**
   - Integrated the classical 27-character Milesian/Ionic Greek isopsephy cipher mapping units (1–9), tens (10–90), and hundreds (100–900).

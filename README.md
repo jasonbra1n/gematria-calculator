@@ -27,7 +27,7 @@ You can try the calculator live at: **[gematria-calculator.jasonbrain.com](https
 
 The Gematria Calculator is designed to be a comprehensive and user-friendly tool for both enthusiasts and researchers.
 
--   **Comprehensive Gematria Engine:** Instantly calculate values across **28 different gematria systems**.
+-   **Comprehensive Gematria Engine:** Instantly calculate values across **29 different gematria systems**.
 -   **Custom Cipher System:** Build, save, and import/export your own custom gematria mappings.
 -   **Phrase Comparison View:** Side-by-side analysis of multiple phrases with a new, streamlined system selection overlay.
 -   **Extensive System Support:** Includes common systems like Ordinal, Reduction, and Standard, as well as more esoteric ones like Sumerian, Primes, and Alphanumeric Qabbala (AQ).
@@ -50,7 +50,7 @@ The Gematria Calculator is designed to be a comprehensive and user-friendly tool
 
 This project is a private research tool. All rights reserved. For more information, please see our [docs/PRIVACY.md](docs/PRIVACY.md) and [docs/TOS.md](docs/TOS.md).
 
-## � Usage
+## 📖 Usage
 
 1.  **Enter a word or phrase** in the input field.
 2.  Click **"Select Gematria Systems"** to open the customization overlay.
@@ -60,15 +60,3 @@ This project is a private research tool. All rights reserved. For more informati
     -   Optionally, check "Display Reduced Values" to see the single-digit reduction for each result.
 4.  Click **"Save & Calculate"**. Results will also update in real-time as you type in the main input field.
 
-## Embedding
-
-You can embed the calculator in your own website using this iFrame code:
-
-```html
-<iframe 
-  src="https://gematria-calculator.jasonbrain.com/" 
-  width="100%" 
-  height="600" 
-  frameborder="0" 
-  style="border: none;">
-</iframe>
